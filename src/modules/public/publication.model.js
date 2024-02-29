@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const PublicSchema = mongoose.Schema({
+const PublicationSchema = mongoose.Schema({
   title: {
     type: String,
     required: [true, "El titulo es obligatorio"],
@@ -15,9 +15,9 @@ const PublicSchema = mongoose.Schema({
     required: [true, "El nombre del user es obligarorio"]
   },
   categorieId: {
-    type: String,
-    required: [true, "La categoria es obligaroria"],
-    unique: true,
+    type: Schema.Types.ObjectId,
+    ref: 'Catefories',
+    required: [true, 'La cotegoria es obligatorio']
   },
   categorieName: {
     type: String,
@@ -31,6 +31,9 @@ const PublicSchema = mongoose.Schema({
   img: {
     type: String,
   },
+  comments: [{ 
+    type: Schema.Types.ObjectId, ref: 'Opinion' 
+  }],
   estado: {
     type: Boolean,
     default: true,
@@ -43,4 +46,4 @@ const PublicSchema = mongoose.Schema({
 //   return usuario;
 // }
 
-export default mongoose.model('Public', PublicSchema);
+export default mongoose.model('Publication', PublicationSchema);

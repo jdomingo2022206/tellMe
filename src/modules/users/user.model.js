@@ -10,7 +10,7 @@ const UserSchema = mongoose.Schema({
     required: [true, "El correo es obligarorio"],
     unique: true,
   },
-  passwor: {
+  password: {
     type: String,
     required: [true, "La contraseña es obligaroria"],
   },

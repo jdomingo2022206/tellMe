@@ -2,7 +2,9 @@
 This project do all wathever is suposed to do.
 
 > **Note:** The **tellMe** was inspired by the `myspace` forum.
-> [![myspace](https://forum.huawei.com/enterprise/api/file/v1/small/thread/667229096909869056.jpg?appid=esc_es)](https://es.wikipedia.org/wiki/Myspace)
+>
+> [<img src="https://forum.huawei.com/enterprise/api/file/v1/small/thread/667229096909869056.jpg?appid=esc_es" width="300" height="200">](URL_del_Enlace)
+
 
 ## How run the project?
 
@@ -45,8 +47,3 @@ Remember set your variables creating your .env file The variables you should cre
 
 -   PORT
 -   JWT_SECRET
-
-
-
-
-

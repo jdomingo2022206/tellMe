@@ -33,13 +33,13 @@ npm i --save-dev nodemon
 
 ## Create Token
 
-> This are the credentials to generate your token
+> These are the "default credentials" to generate your token
 
 
-|Role                |User                          |Pass                         |
-|----------------|-------------------------------|-----------------------------|
-|User			 |`'user'`            |`'uss'`            |
-|Admin          |`'admin'`            |`'adm'`            |
+|Role            |User                           |Email                         |Pass                         |
+|----------------|-------------------------------|-----------------------------|-----------------------------|
+|Admin           |`'admin'`                      |`'admin1@kinal.edu.gt'`      |`'adm'`                      |
+|User			 |`'user'`                       |`'user1@kinal.edu.gt'`       |`'uss'`                      |
 
 
 

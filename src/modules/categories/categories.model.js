@@ -14,6 +14,10 @@ const CategorieSchema = mongoose.Schema({
     type: Boolean,
     default: true,
   },
+  date:{
+    type: Date,
+    default: Date.now
+  }
 });
 
 export default mongoose.model('Categorie', CategorieSchema);

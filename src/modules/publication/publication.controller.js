@@ -4,6 +4,7 @@ import Publication from './publication.model';
 import User from '../user/user.model';
 import { isToken } from "../../helpers";
 import Categorie from "../categorie/categorie.model";
+import {createCategory} from '../categories/categories.controller';
 
 export const publicationGet = async (req = request, res = response) => {
     const {limite, desde} = req.query;

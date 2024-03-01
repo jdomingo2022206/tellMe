@@ -1,0 +1,164 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "tellMe",
+    "dateExported": "2024-03-06T02:13:46.120Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6fd3f70a-2e68-42e2-82f3-dbb9c2f4b058",
+            "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
+            "containerId": "",
+            "name": "tellMe",
+            "url": "http://localhost:10433//tellMe/v1/publication",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-13T01:43:18.192Z",
+            "modified": "2024-03-06T02:12:19.720Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "63b6b2b9-add9-4794-a23f-8a20aea0d210",
+            "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
+            "containerId": "",
+            "name": "createMyPublication",
+            "url": "http://localhost:10433//tellMe/v1/publication",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-06T02:12:25.179Z",
+            "modified": "2024-03-06T02:12:25.179Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"courseName\": \"Etica\", \n  \"desc\": \"Curso de Etica a full todos los dias\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "12272bf8-b660-4ac3-8f2c-3f4b8e6aebe3",
+            "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
+            "containerId": "",
+            "name": "deleteMyPublication",
+            "url": "http://localhost:10433//tellMe/v1/publication",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-06T02:12:27.489Z",
+            "modified": "2024-03-06T02:12:27.489Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNkNjQyNmMwMjg2NmI5NzZhZjgyOTUiLCJpYXQiOjE3MDgyMzYwNjMsImV4cCI6MTcwODIzOTY2M30.rRQ23yszT2xP48CdBcTupihIqRe0x5LMw3GwaJB6AhY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"courseName\": \"Etica\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "fcf2f589-cdec-4d7c-9f58-4c99ac78c772",
+            "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
+            "containerId": "",
+            "name": "commentAbout",
+            "url": "http://localhost:10433//tellMe/v1/comment",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-03-06T02:12:30.038Z",
+            "modified": "2024-03-06T02:12:30.038Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgxODIwOTgsImV4cCI6MTcwODE4NTY5OH0.8nCc3xlmUN36EOkJ1l1QXJcKaadCktWm-yG5o7MSCws"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"courseName\":\"Etica\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "5bbea020-dda1-4cd4-b412-e1ba2686e293",
+            "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
+            "containerId": "",
+            "name": "uncommentAbout",
+            "url": "http://localhost:10433//tellMe/v1/comment",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-03-06T02:12:32.539Z",
+            "modified": "2024-03-06T02:12:32.539Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgxNTA4MzEsImV4cCI6MTcwODE1NDQzMX0.LoX4nWY9go8oItRmsLZWwFzCdOulr-U1x0p3PYOqJyU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"courseName\":\"Biotecno I\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "09a5adbf-f46d-4e14-99a8-6d11677bb32c",
+            "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
+            "containerId": "",
+            "name": "myPublications",
+            "url": "http://localhost:10433//tellMe/v1/publication",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-03-06T02:12:35.055Z",
+            "modified": "2024-03-06T02:12:35.055Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgyMzc1NjcsImV4cCI6MTcwODI0MTE2N30.oH2KtJF8gtX0UgQwbE_alyuM5i5mYXQVf6YbQg6pr3g"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "7332cf48-d33c-4fdc-aa22-a82771c53af7",
+            "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
+            "containerId": "",
+            "name": "myComments",
+            "url": "http://localhost:10433//tellMe/v1/comment",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-03-06T02:12:37.535Z",
+            "modified": "2024-03-06T02:12:37.535Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgyMzc1NjcsImV4cCI6MTcwODI0MTE2N30.oH2KtJF8gtX0UgQwbE_alyuM5i5mYXQVf6YbQg6pr3g"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

@@ -1,12 +1,22 @@
-const { response, json } = require('express');
-const bcryptjs = require('bcryptjs');
-const {isToken} = require('../helpers/tk-methods');
-const User = require('../models/user');
+import { response, json } from ('express');
+import bcryptjs from ('bcryptjs');
+import {isToken} from ('../../helpers/tk-metods');
+import User from ('./user.model');
 
-const userGet = async (req, res = response ) => {
+const verifyAdmin = async (user, res) =>{
+    if (user.role !== 'ADMIN_ROLE') {
+        return res.status(403).json({ msg: 'No estas autorizado.' });
+    }
+    console.log('* Admin auth ;) ***');
+    return;
+}
+
+export const userGet = async (req, res = response ) => {
     console.log('');
     console.log('--- [NOTES] userGet.user')
     try {
+        const user = await isToken(req, res);
+        await verifyAdmin(user, res);
         const { limite, desde } = req.query;
         const query = { estado: true};
 
@@ -23,19 +33,21 @@ const userGet = async (req, res = response ) => {
         });
     } catch (e) {
         console.log('Hubo un error al obtener usuarios.');
-        // res.status(500).json({ msg: 'Hubo un error al obtener usuarios.' });
+        // res.status(500).json({ msg: 'Hubo un error al obtener usuarios. Error ${e.status}: ${e.message}' });
         // throw new Error(e);
     }
 } 
 
-const getUserByid = async (req, res) => {
+export const getUserByid = async (req, res) => {
     console.log('');
     console.log('--- [NOTES] getUserById.user')
     try {
+        const user = await isToken(req, res);
+        await verifyAdmin(user, res);
         const { id } = req.params;
-        const user = await User.findOne({_id: id});
+        const userFind = await User.findOne({_id: id});
         res.status(200).json({
-            user
+            userFind
         });
     } catch (e) {
         console.log('Hubo un error al obtener el usuario por id.');
@@ -44,20 +56,21 @@ const getUserByid = async (req, res) => {
     }
 }
 
-const userPut = async (req, res) => {
+export const userPut = async (req, res) => {
     console.log('');
     console.log('--- [NOTES] userPut.user')
     try {
+        const user = await isToken(req, res);
+        await verifyAdmin(user, res);
         const { id } = req.params;
         const { _id, google, mail, ...resto} = req.body;
-
         await User.findByIdAndUpdate(id, resto);
 
-        const user = await User.findOne({_id: id});
+        const userFind = await User.findOne({_id: id});
 
         res.status(200).json({
             msg: 'Usuario Actualizado exitosamente',
-            user
+            userFind
         })
     } catch (e) {
         console.log('Hubo un error al actualizar usuario.');
@@ -66,18 +79,20 @@ const userPut = async (req, res) => {
     }
 }
 
-const userDelete = async (req, res) => {
+export const userDelete = async (req, res) => {
     console.log('');
     console.log('--- [NOTES] userDelete.user')
     try {
+        const user = await isToken(req, res);
+        await verifyAdmin(user, res);
         const {id} = req.params;
         await User.findByIdAndUpdate(id,{estado: false});
 
-        const user = await User.findOne({_id: id});
+        const userFind = await User.findOne({_id: id});
 
         res.status(200).json({
             msg: 'user eliminado exitosamente',
-            user
+            userFind
         });
     } catch (e) {
         console.log('Hubo un error al eliminar usuario.');
@@ -86,7 +101,7 @@ const userDelete = async (req, res) => {
     }
 }
 
-const userPost = async (req, res) =>{
+export const userPost = async (req, res) =>{
     console.log('');
     console.log('--- [NOTES] userPost.user')
     try {
@@ -108,7 +123,7 @@ const userPost = async (req, res) =>{
     }
 }
 
-const userTeacherPost = async (req, res) =>{
+export const userAdminPost = async (req, res) =>{
     console.log('');
     console.log('--- [NOTES] userTeacher.user')
     try {
@@ -124,13 +139,13 @@ const userTeacherPost = async (req, res) =>{
             user
         });
     } catch (e) {
-        console.log('Hubo un error al agregar profesor.');
+        console.log('Hubo un error al agregar admin.');
         // res.status(500).json({ msg: 'Hubo un error al agregar profesor.' });
         // throw new Error(e);
     }
 }
 
-const editMyProfile = async (req, res) => {
+export const editMyProfile = async (req, res) => {
     console.log('');
     console.log('--- [NOTES] editMyProfile.user')
     try { 
@@ -147,15 +162,4 @@ const editMyProfile = async (req, res) => {
         // res.status(500).json({ msg: 'Hubo un error al editar el perfil.' });
         // throw new Error(e);
     }
-}
-
-
-module.exports = {
-    userDelete,
-    userPost,
-    userTeacherPost,
-    userGet,
-    getUserByid,
-    userPut,
-    editMyProfile
 }

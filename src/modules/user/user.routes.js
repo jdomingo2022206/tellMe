@@ -1,8 +1,17 @@
-const { Router } = require('express');
-const { check } = require('express-validator');
-const { validateCampus } = require('../middlewares/validate-campus');
-const { existentEmail, existentUserById, roleValid} = require('../helpers/db-validators');
-const { userDelete, userPost, userTeacherPost, userGet, getUserByid, userPut, editMyProfile } = require('../controllers/user.controller');
+import { Router } from "express";
+import { check } from "express-validator";
+import { validateCampus } from ('../../middlewares/validate-campus');
+import { haveRole } from "../../middlewares/validate-roles.js";
+import { validateJWT } from "../../middlewares/validate-jwt.js";
+import { existentEmail,existentUserById,roleValid,existUserByEmail} from ('../../middlewares/db-validators');
+import { editMyProfile,
+    userAdminPost,
+    userPost,
+    userDelete,
+    userPut,
+    getUserByid,
+    userGet,
+     } from ('./user.controller.js');
 const router = Router();
 
 router.get("/", userGet);
@@ -12,6 +21,7 @@ router.put('/editMyProfile', editMyProfile);
 router.get(
     "/:id",
     [
+        validateJWT,
         check("id","El id no es un formato válido de MongoDB").isMongoId(),
         check("id").custom(existentUserById),
         validateCampus
@@ -19,7 +29,8 @@ router.get(
 
 router.put(
     "/:id",
-    [
+    [   
+        validateJWT,
         check("id","El id no es un formato válido de MongoDB").isMongoId(),
         check("id").custom(existentUserById),
         validateCampus
@@ -27,7 +38,8 @@ router.put(
 
 router.delete(
         "/:id",
-        [
+        [   
+            validateJWT,
             check("id","El id no es un formato válido de MongoDB").isMongoId(),
             check("id").custom(existentUserById),
             validateCampus
@@ -41,18 +53,17 @@ router.post(
         check("password","El password debe ser mayor a 6 caracteres").isLength({min: 6,}),
         check("mail","Este no es un correo válido").isEmail(),
         check("mail").custom(existentEmail),
-        check("role").custom(roleValid),
     ], userPost); 
 
 router.post(
-    "/teacher", 
+    "/admin", 
     [
         check("name","El nombre es obligatorio").not().isEmpty(),
         check("password","El password debe ser mayor a 6 caracteres").isLength({min: 6,}),
         check("mail","Este no es un correo válido").isEmail(),
         check("mail").custom(existentEmail),
         validateCampus,
-    ], userTeacherPost); 
+    ], userAdminPost); 
 
 
 

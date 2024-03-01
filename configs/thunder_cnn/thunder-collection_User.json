@@ -1,0 +1,167 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "User",
+    "dateExported": "2024-03-05T05:26:55.043Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ef6681ff-8c0f-4980-a0cd-4e84038d0a7f",
+            "colId": "ad268604-63d4-4ba8-8239-20465e858bde",
+            "containerId": "",
+            "name": "userPost",
+            "url": "http://localhost:10433/tellMe/v1/user/",
+            "method": "POST",
+            "sortNum": 2500,
+            "created": "2024-03-05T05:26:33.079Z",
+            "modified": "2024-03-05T05:26:33.079Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"user\",\n  \"mail\":\"user1@kinal.edu.gt\",\n  \"password\":\"uss\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fcf2f589-cdec-4d7c-9f58-4c99ac78c772",
+            "colId": "ad268604-63d4-4ba8-8239-20465e858bde",
+            "containerId": "",
+            "name": "addMeCourse",
+            "url": "http://localhost:10433/academic/student/addMeCourse",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-16T15:00:20.016Z",
+            "modified": "2024-02-17T15:04:36.171Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgxODIwOTgsImV4cCI6MTcwODE4NTY5OH0.8nCc3xlmUN36EOkJ1l1QXJcKaadCktWm-yG5o7MSCws"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"courseName\":\"Etica\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "09a5adbf-f46d-4e14-99a8-6d11677bb32c",
+            "colId": "ad268604-63d4-4ba8-8239-20465e858bde",
+            "containerId": "",
+            "name": "myCourses",
+            "url": "http://localhost:10433/academic/student/myCourses",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-16T15:00:32.991Z",
+            "modified": "2024-02-18T06:26:30.959Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgyMzc1NjcsImV4cCI6MTcwODI0MTE2N30.oH2KtJF8gtX0UgQwbE_alyuM5i5mYXQVf6YbQg6pr3g"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "63b6b2b9-add9-4794-a23f-8a20aea0d210",
+            "colId": "ad268604-63d4-4ba8-8239-20465e858bde",
+            "containerId": "",
+            "name": "createMyCourse",
+            "url": "http://localhost:10433/academic/academic/teacher/createMyCourse",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2024-03-05T00:48:49.002Z",
+            "modified": "2024-03-05T00:48:49.002Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"courseName\": \"Etica\", \n  \"desc\": \"Curso de Etica a full todos los dias\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5bbea020-dda1-4cd4-b412-e1ba2686e293",
+            "colId": "ad268604-63d4-4ba8-8239-20465e858bde",
+            "containerId": "",
+            "name": "outMeCourse",
+            "url": "http://localhost:10433/academic/student/outMeCourse",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-16T15:00:53.902Z",
+            "modified": "2024-02-17T06:43:28.455Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgxNTA4MzEsImV4cCI6MTcwODE1NDQzMX0.LoX4nWY9go8oItRmsLZWwFzCdOulr-U1x0p3PYOqJyU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"courseName\":\"Biotecno I\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "12d7d9fa-a61c-4cbb-b8cd-716e86061c52",
+            "colId": "ad268604-63d4-4ba8-8239-20465e858bde",
+            "containerId": "",
+            "name": "editMyProfile Copy Copy",
+            "url": "http://localhost:10433/academic/user/editMyProfile",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-18T06:19:48.082Z",
+            "modified": "2024-02-18T06:19:48.082Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNkNjQyNmMwMjg2NmI5NzZhZjgyOTUiLCJpYXQiOjE3MDgyMzYwNjMsImV4cCI6MTcwODIzOTY2M30.rRQ23yszT2xP48CdBcTupihIqRe0x5LMw3GwaJB6AhY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Braulio Echeverria\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "12272bf8-b660-4ac3-8f2c-3f4b8e6aebe3",
+            "colId": "ad268604-63d4-4ba8-8239-20465e858bde",
+            "containerId": "",
+            "name": "deleteMyCourse",
+            "url": "http://localhost:10433/academic/teacher/deleteMeCourse",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-03-05T00:49:03.967Z",
+            "modified": "2024-03-05T00:49:03.967Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNkNjQyNmMwMjg2NmI5NzZhZjgyOTUiLCJpYXQiOjE3MDgyMzYwNjMsImV4cCI6MTcwODIzOTY2M30.rRQ23yszT2xP48CdBcTupihIqRe0x5LMw3GwaJB6AhY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"courseName\": \"Etica\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

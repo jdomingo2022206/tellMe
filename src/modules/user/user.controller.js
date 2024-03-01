@@ -33,7 +33,7 @@ export const userGet = async (req, res = response ) => {
         });
     } catch (e) {
         console.log('Hubo un error al obtener usuarios.');
-        // res.status(500).json({ msg: 'Hubo un error al obtener usuarios. Error ${e.status}: ${e.message}' });
+        res.status(500).json({ msg: 'Hubo un error al obtener usuarios. Error ${e.status}: ${e.message}' });
         // throw new Error(e);
     }
 } 
@@ -51,7 +51,7 @@ export const getUserByid = async (req, res) => {
         });
     } catch (e) {
         console.log('Hubo un error al obtener el usuario por id.');
-        // res.status(500).json({ msg: 'Hubo un error al obtener el usuario por id.' });
+        res.status(500).json({ msg: 'Hubo un error al obtener el usuario por id.' });
         // throw new Error(e);
     }
 }
@@ -74,7 +74,7 @@ export const userPut = async (req, res) => {
         })
     } catch (e) {
         console.log('Hubo un error al actualizar usuario.');
-        // res.status(500).json({ msg: 'Hubo un error al actualizar usuario.' });
+        res.status(500).json({ msg: 'Hubo un error al actualizar usuario.' });
         // throw new Error(e);
     }
 }
@@ -96,7 +96,7 @@ export const userDelete = async (req, res) => {
         });
     } catch (e) {
         console.log('Hubo un error al eliminar usuario.');
-        // res.status(500).json({ msg: 'Hubo un error al eliminar usuario.' });
+        res.status(500).json({ msg: 'Hubo un error al eliminar usuario.' });
         // throw new Error(e);
     }
 }
@@ -108,17 +108,22 @@ export const userPost = async (req, res) =>{
         const { name, mail, password} = req.body;
         const role = "USER_ROLE"
         const user = new User({name, mail, password, role});
-
+        
         const salt = bcryptjs.genSaltSync();
         user.password = bcryptjs.hashSync(password, salt);
-
+        
         await user.save();
         res.status(200).json({
             user
         });
     } catch (e) {
         console.log('Hubo un error al agregar usuario.');
-        // res.status(500).json({ msg: 'Hubo un error al agregar usuario.' });
+        
+        if (e.code === 11000) {
+            res.status(500).json({ msg: 'El correo ya fue registrado ' });
+        }else{
+            res.status(500).json({ msg: 'Hubo un error al agregar usuario. '});
+        }
         // throw new Error(e);
     }
 }
@@ -140,7 +145,7 @@ export const userAdminPost = async (req, res) =>{
         });
     } catch (e) {
         console.log('Hubo un error al agregar admin.');
-        // res.status(500).json({ msg: 'Hubo un error al agregar profesor.' });
+        res.status(500).json({ msg: 'Hubo un error al agregar profesor.' });
         // throw new Error(e);
     }
 }
@@ -159,7 +164,7 @@ export const editMyProfile = async (req, res) => {
         
     }catch (e) {
         console.log('Hubo un error al editar el perfil.');
-        // res.status(500).json({ msg: 'Hubo un error al editar el perfil.' });
+        res.status(500).json({ msg: 'Hubo un error al editar el perfil.' });
         // throw new Error(e);
     }
 }

@@ -1,0 +1,132 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Admin",
+    "dateExported": "2024-03-05T05:26:04.112Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fb369a16-a3a6-4a0d-98ee-4cef4893e855",
+            "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
+            "containerId": "",
+            "name": "userPost",
+            "url": "http://localhost:10433/tellMe/v1/user/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-13T01:43:18.245Z",
+            "modified": "2024-03-05T04:52:55.997Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"user\",\n  \"mail\":\"user1@kinal.edu.gt\",\n  \"password\":\"uss\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "932bb745-4eb3-418c-9a8c-ea71217192bc",
+            "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
+            "containerId": "",
+            "name": "adminPost",
+            "url": "http://localhost:10433/tellMe/v1/user/admin",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2024-02-13T01:43:18.250Z",
+            "modified": "2024-03-05T04:15:22.590Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"admin\",\n  \"mail\":\"admin1@kinal.edu.gt\",\n  \"password\":\"adm\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "beb4ee22-e4b9-4854-bc54-b538a4fc40c9",
+            "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
+            "containerId": "",
+            "name": "userGet",
+            "url": "http://localhost:10433/academic/user",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-13T01:43:18.246Z",
+            "modified": "2024-02-13T01:43:18.246Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3206db06-8864-4d27-850e-2911ec48a6b9",
+            "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
+            "containerId": "",
+            "name": "getUserById",
+            "url": "http://localhost:10433/academic/user/65cd6426c02866b76af8295",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-13T01:43:18.247Z",
+            "modified": "2024-02-15T01:14:03.181Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "afa1d9ad-73cc-4519-84ca-7df845bbfe81",
+            "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
+            "containerId": "",
+            "name": "userPut",
+            "url": "http://localhost:10433/academic/user/id",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-13T01:43:18.248Z",
+            "modified": "2024-02-13T01:43:18.248Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Paquita la del barrio\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3ada72a2-a8f6-4142-8a2e-ecd739217fde",
+            "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
+            "containerId": "",
+            "name": "userDelete",
+            "url": "http://localhost:10433/academic/user/65cc4f97aa56ebfee7bff361",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-13T01:43:18.249Z",
+            "modified": "2024-02-15T01:06:03.814Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "96c189bb-2b17-4bee-abad-8a219d58ebd8",
+            "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
+            "containerId": "",
+            "name": "editMyProfile Copy",
+            "url": "http://localhost:10433/academic/user/editMyProfile",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-02-18T06:13:58.495Z",
+            "modified": "2024-02-18T06:19:14.986Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNkNjQyNmMwMjg2NmI5NzZhZjgyOTUiLCJpYXQiOjE3MDgyMzYwNjMsImV4cCI6MTcwODIzOTY2M30.rRQ23yszT2xP48CdBcTupihIqRe0x5LMw3GwaJB6AhY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Braulio Echeverria\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

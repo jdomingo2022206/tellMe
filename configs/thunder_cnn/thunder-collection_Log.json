@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Log",
+    "dateExported": "2024-03-05T05:25:45.492Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "99e90ddb-b6bc-4fd6-ba62-a73379d1d83f",
+            "colId": "c0245396-a55c-4867-952d-dae65d6e9709",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:10433/tellMe/v1/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-16T16:20:10.037Z",
+            "modified": "2024-03-05T05:23:59.757Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mail\":\"admin1@kinal.edu.gt\",\n  \"password\":\"adm\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

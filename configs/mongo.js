@@ -27,7 +27,7 @@ export const dbConnection = async () => {
         });
 
         // Conexión a la base de datos
-        await mongoose.connect(process.env.URI_MONGO, {
+        await mongoose.connect(process.env.MONGODB_CNN, {
             serverSelectionTimeoutMS: 5000,
             maxPoolSize: 50
         });

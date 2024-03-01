@@ -25,8 +25,7 @@ const PublicationSchema = Schema({
   },
   categorieName: {
     type: String,
-    required: [true, "El nombre de la categoria es obligaroria"],
-    unique: true,
+    required: [true, "El nombre de la categoria es obligaroria"]
   },
   text: {
     type: String,

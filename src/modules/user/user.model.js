@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+import {Schema, model, now} from 'mongoose';
 
-const UserSchema = mongoose.Schema({
+const UserSchema = Schema({
   name: {
     type: String,
     required: [true, "El nombre es obligatorio"],
@@ -42,4 +42,4 @@ UserSchema.methods.toJSON = function(){
   return usuario;
 }
 
-export default mongoose.model('User', UserSchema);
+export default model('User', UserSchema);

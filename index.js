@@ -1,6 +1,8 @@
-//Finish V2.0.0
-const Server = require('./models/server');
+import { config } from "dotenv";
+config();
 
-require('dotenv').config();
+import Server from "./configs/server.js";
+// Crear una instancia del servidor
 const server = new Server();
+// Iniciar el servidor
 server.listen();

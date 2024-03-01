@@ -1,7 +1,7 @@
-const User = require('../modules/user/user.model');
-const Role = require('../modules/role/role.model');
-const Publication = require('../modules/publication/publication.model');
-const Comment = require('../modules/comment/comment.model');
+import User from "../modules/user/user.model.js";
+import Role from "../modules/role/role.model.js";
+import Publication from "../modules/publication/publication.model.js";
+import Comment from "../modules/comment/comment.model.js";
 
 export const existentEmail = async (correo = '') => {
     console.log('');

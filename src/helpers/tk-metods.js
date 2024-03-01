@@ -1,7 +1,7 @@
-const jwt = require('jsonwebtoken');
-const User = require('../models/user');
+import jwt from "jsonwebtoken";
+import User from "../modules/user/user.model.js";
 
-isToken = async (req, res) => {
+export const isToken = async (req, res) => {
     const token = req.headers['x-access-token'] ;
     if (!token) {
         return res.status(403).json({ msg: 'No se proporcionó un token.' });
@@ -10,7 +10,7 @@ isToken = async (req, res) => {
     return user;
 }
 
-verifyToken = async (token, res) => {
+const verifyToken = async (token, res) => {
     try {
         const decoded = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
         const user = await User.findOne({_id: decoded.uid});
@@ -24,8 +24,4 @@ verifyToken = async (token, res) => {
           
     }
 
-}
-
-module.exports = {
-    isToken
 }

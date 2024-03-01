@@ -1,7 +1,7 @@
-import { response, json } from ('express');
-import bcryptjs from ('bcryptjs');
-import {isToken} from ('../../helpers/tk-metods');
-import User from ('./user.model');
+import { response, json } from "express";
+import bcryptjs from "bcryptjs";
+import {isToken} from "../../helpers/tk-metods.js";
+import User from "./user.model.js";
 
 const verifyAdmin = async (user, res) =>{
     if (user.role !== 'ADMIN_ROLE') {
@@ -125,7 +125,7 @@ export const userPost = async (req, res) =>{
 
 export const userAdminPost = async (req, res) =>{
     console.log('');
-    console.log('--- [NOTES] userTeacher.user')
+    console.log('--- [NOTES] userAdminPost.user')
     try {
         const { name, mail, password } = req.body;
         const role = "ADMIN_ROLE"

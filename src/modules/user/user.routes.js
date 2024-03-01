@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { validateCampus } from ('../../middlewares/validate-campus');
+import { validateCampus } from "../../middlewares/validate-campus.js";
 import { haveRole } from "../../middlewares/validate-roles.js";
 import { validateJWT } from "../../middlewares/validate-jwt.js";
-import { existentEmail,existentUserById,roleValid,existUserByEmail} from ('../../middlewares/db-validators');
+import { existentEmail,existentUserById,roleValid,existUserByEmail} from "../../middlewares/db-validators.js";
 import { editMyProfile,
     userAdminPost,
     userPost,
@@ -11,7 +11,7 @@ import { editMyProfile,
     userPut,
     getUserByid,
     userGet,
-     } from ('./user.controller.js');
+     } from "./user.controller.js";
 const router = Router();
 
 router.get("/", userGet);
@@ -67,4 +67,4 @@ router.post(
 
 
 
-module.exports = router;
+export default router;

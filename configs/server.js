@@ -5,7 +5,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
-// import userRoutes from '../src/user/user.routes.js';
+import userRoutes from '../src/modules/user/user.routes.js';
 // import authRoutes from '../src/auth/auth.routes.js';
 // import petRoutes from '../src/pet/pet.routes.js';
 // import appoinmentRoutes from '../src/appointment/appointment.routes.js';
@@ -42,10 +42,10 @@ class Server {
     // Configura las rutas de la aplicación
     routes() {
         this.app.use(this.userPath, userRoutes);
-        this.app.use(this.authPath, authRoutes);
-        this.app.use(this.publicationPath, petRoutes);
-        this.app.use(this.commentPath, appoinmentRoutes);
-        this.app.use(this.categoriePath, appoinmentRoutes);
+        // this.app.use(this.authPath, authRoutes);
+        // this.app.use(this.publicationPath, petRoutes);
+        // this.app.use(this.commentPath, appoinmentRoutes);
+        // this.app.use(this.categoriePath, appoinmentRoutes);
     }
 
     // Inicia el servidor y escucha en el puerto especificado

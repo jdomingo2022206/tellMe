@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+import {Schema, model, now} from 'mongoose';
 
-const PublicationSchema = mongoose.Schema({
+const PublicationSchema = Schema({
   title: {
     type: String,
     required: [true, "El titulo es obligatorio"],
@@ -50,4 +50,4 @@ const PublicationSchema = mongoose.Schema({
 //   return usuario;
 // }
 
-export default mongoose.model('Publication', PublicationSchema);
+export default model('Publication', PublicationSchema);

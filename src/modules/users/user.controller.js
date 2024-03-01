@@ -1,6 +1,7 @@
 import { response, request } from "express";
 import bcryptjs from 'bcryptjs';
 import User from './user.model.js';
+const {isToken} = require('../helpers/tk-methods');
 
 export const usuariosGet = async (req = request, res = response) => {
     const {limite, desde} = req.query;

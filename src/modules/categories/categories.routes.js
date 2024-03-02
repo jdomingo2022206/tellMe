@@ -1,70 +1,49 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import {
-  usuariosGet,
-  usuariosPost,
-  getUsuarioById,
-  usuariosPut,
-  usuariosDelete,
-} from "./user.controller.js";
-import {
-  existenteEmail,
-  esRoleValido,
-  existeUsuarioById,
-} from "../../helpers/db-validators.js";
-import { validarCampos } from "../middlewares/validar-campos.js";
-import { tieneRole } from "../../middlewares/validar-roles.js";
-import { validarJWT } from "../../middlewares/validar-jwt.js";
+import {categoriesGet,getCategoryById,createCategory,deleteCategory} from "../categories/categories.controller.js"
+import { validateCampus } from "../../middlewares/validate-campus.js";
+import { validateJWT } from "../../middlewares/validate-jwt.js";
+
 
 const router = Router();
 
-router.get("/", usuariosGet);
+router.get("/", categoriesGet);
 
 router.get(
   "/:id",
   [
     check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
+    validateCampus,
   ],
-  getUsuarioById
+  getCategoryById
 );
 
 router.post(
   "/",
   [
-    check("nombre", "El nombre es obligatorio").not().isEmpty(),
-    check("password", "El password debe ser mayor a 6 caracteres").isLength({
-      min: 6,
+    validateJWT,
+    check("name", "El nombre es obligatorio").not().isEmpty(),
+    check("name", "El nombre debe ser mayor a 3 caracteres").isLength({
+      min: 3,
     }),
-    check("correo", "Este no es un correo válido").isEmail(),
-    check("correo").custom(existenteEmail),
-    check("role").custom(esRoleValido),
-    validarCampos,
+    check("desc", "La descripción es obligatoria").not().isEmpty(),
+    check("desc", "La descripción debe ser mayor a 15 caracteres").isLength({
+      min: 15,
+    }),
+    validateCampus,
   ],
-  usuariosPost
-);
-
-router.put(
-  "/:id",
-  [
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
-  ],
-  usuariosPut
+  createCategory
 );
 
 router.delete(
-  "/:id",
+  "/",
   [
-    validarJWT,
-    tieneRole("ADMIN_ROLE", "VENTAS_ROLE"),
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
+    validateJWT,
+    check('name', 'El nombre es obligatorio').not().isEmpty(),
+    validateCampus,
   ],
-  usuariosDelete
+  deleteCategory
 );
+
 
 export default router;

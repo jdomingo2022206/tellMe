@@ -24,6 +24,12 @@ export const getCategoryById = async (req, res) => {
     const {id} = req.params;
     const category = await Categorie.findOne({_id: id});
 
+    if (!category){
+        return res.status(400).json({msg: 'La categoria no existe.'});
+    }else if(category.estado === false){
+        return res.status(400).json({msg: 'La categoria no esta disponible actualmente.'});
+    }
+
     res.status(200).json({
         category
     })
@@ -58,6 +64,13 @@ export const deleteCategory = async (req, res) => {
     console.log('deleteCategory.categories');
     try {
         let {name} = req.body;
+        const user = await isToken(req, res);
+        if (!user){
+            return;
+        }
+        if (user.role !== 'ADMIN_ROLE'){
+            return res.status(400).json({msg: 'No tienes permisos para eliminar categorias.'});
+        }
         name = "#"+name.toLowerCase().replace(/ /g, '');
         const existCategorie = await Categorie.findOne({name})
         if (!existCategorie){

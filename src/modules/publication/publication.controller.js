@@ -34,7 +34,9 @@ export const getPublicById = async (req, res) => {
 
 export const createMyPublication = async (req, res) => {
     try {
-        const {title, categorieName, text} = req.body;
+        const {title, text} = req.body;
+        let {categorieName} = req.body;
+        categorieName = "#"+categorieName.toLowerCase().replace(/ /g, '');
         const user = await isToken(req, res);
         if (!user){
             return;
@@ -66,9 +68,9 @@ export const myPublications = async (req, res) => {
 
 export const deleteMyPublication = async (req, res) => {
     try {
-        const {publicationName, publicationDate} = req.body;
+        const {title, date} = req.body;
         const user = await isToken(req, res);
-        const publication = await Publication.findOne({title: publicationName, date: publicationDate});
+        const publication = await Publication.findOne({title: title, date: date});
         if (!publication) {
             return res.status(400).json({ msg: 'La publicacion no existe.' });
         }else if (publication.userId.toString() !== user._id) {
@@ -85,9 +87,9 @@ export const deleteMyPublication = async (req, res) => {
 
 export const updateMyPublication = async (req, res) => {
     try {
-        const {publicationName, publicationDate, ...resto} = req.body;
+        const {title, date, ...resto} = req.body;
         const user = await isToken(req, res);
-        const publication = await Publication.findOne({title: publicationName, date: publicationDate});
+        const publication = await Publication.findOne({title: title, date: date});
         if (!publication) {
             return res.status(400).json({ msg: 'La publicacion no existe.' });
         }else if (publication.userId.toString() !== user._id) {

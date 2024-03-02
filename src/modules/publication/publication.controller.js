@@ -57,6 +57,9 @@ export const createMyPublication = async (req, res) => {
 export const myPublications = async (req, res) => {
     try {
         const user = await isToken(req, res);
+        if (!user){
+            return;
+        }
         const publications = await Publication.find({userId: user._id});
         res.status(200).json({ publications });
     } catch (e) {
@@ -70,6 +73,9 @@ export const deleteMyPublication = async (req, res) => {
     try {
         const {title, date} = req.body;
         const user = await isToken(req, res);
+        if (!user){
+            return;
+        }
         const publication = await Publication.findOne({title: title, date: date});
         if (!publication) {
             return res.status(400).json({ msg: 'La publicacion no existe.' });

@@ -1,70 +1,69 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import {
-  usuariosGet,
-  usuariosPost,
-  getUsuarioById,
-  usuariosPut,
-  usuariosDelete,
-} from "./user.controller.js";
-import {
-  existenteEmail,
-  esRoleValido,
-  existeUsuarioById,
-} from "../../helpers/db-validators.js";
-import { validarCampos } from "../middlewares/validar-campos.js";
-import { tieneRole } from "../../middlewares/validar-roles.js";
-import { validarJWT } from "../../middlewares/validar-jwt.js";
+import {commentGet,
+  getCommentById,
+  myComments,
+  createMyComment,
+  deleteMyComment,
+  updateMyComment} from "./comment.controller.js"
+import { validateCampus } from "../../middlewares/validate-campus.js";
+import { validateJWT } from "../../middlewares/validate-jwt.js";
 
 const router = Router();
 
-router.get("/", usuariosGet);
+router.get("/", commentGet);
+
+router.get(
+  "/my",
+  [
+    validateJWT,
+  ],
+  myComments
+);
 
 router.get(
   "/:id",
   [
     check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
+    validateCampus,
   ],
-  getUsuarioById
+  getCommentById
 );
 
 router.post(
   "/",
   [
-    check("nombre", "El nombre es obligatorio").not().isEmpty(),
-    check("password", "El password debe ser mayor a 6 caracteres").isLength({
-      min: 6,
-    }),
-    check("correo", "Este no es un correo válido").isEmail(),
-    check("correo").custom(existenteEmail),
-    check("role").custom(esRoleValido),
-    validarCampos,
+    validateJWT,
+    check("publicationTitle", "El titulo de la publicacion a comentar es obligatorio").not().isEmpty(),  
+    check("publicationDate", "La fecha es obligatoria").not().isEmpty(),
+    check("text", "El texto es obligatorio").not().isEmpty(),
+    validateCampus,
   ],
-  usuariosPost
+  createMyComment
 );
 
 router.put(
-  "/:id",
+  "/",
   [
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
+    validateJWT,
+    check("publicationTitle", "El titulo de la publicacion a comentar es obligatorio").not().isEmpty(),  
+    check("commentDate", "La fecha del comentario es obligatoria").not().isEmpty(),
+    check("comment", "El nuevo comentario es obligatorio").not().isEmpty(),
+    validateCampus,
   ],
-  usuariosPut
+  updateMyComment
 );
 
 router.delete(
-  "/:id",
+  "/",
   [
-    validarJWT,
-    tieneRole("ADMIN_ROLE", "VENTAS_ROLE"),
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
+    validateJWT,
+    check("publicationTitle", "El titulo de la publicacion es obligatorio").not().isEmpty(),
+    check("commentDate","La fecha es obligatoria").not().isEmpty(),
+    validateCampus,
   ],
-  usuariosDelete
+  deleteMyComment
 );
+
 
 export default router;

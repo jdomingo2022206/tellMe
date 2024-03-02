@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "tellMe",
-    "dateExported": "2024-03-06T05:25:15.589Z",
+    "dateExported": "2024-03-06T06:18:56.914Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -104,7 +104,7 @@
             "method": "POST",
             "sortNum": 50000,
             "created": "2024-03-06T02:12:30.038Z",
-            "modified": "2024-03-06T04:53:40.114Z",
+            "modified": "2024-03-06T05:47:36.002Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -114,7 +114,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"courseName\":\"Etica\"\n}",
+                "raw": "{\n  \"publicationTitle\": \"Messi\", \n  \"publicationDate\": \"2024-03-06T05:01:31.560Z\",\n  \"text\": \"Todo un mago la pulga \"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -129,7 +129,7 @@
             "method": "PUT",
             "sortNum": 55000,
             "created": "2024-03-06T03:41:03.400Z",
-            "modified": "2024-03-06T04:53:44.003Z",
+            "modified": "2024-03-06T05:50:46.330Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -139,7 +139,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"courseName\":\"Etica\"\n}",
+                "raw": "{\n  \"publicationTitle\": \"Messi\", \n  \"commentDate\": \"****\",\n  \"comment\": \"Alto genio\"\n}",
                 "form": []
             },
             "reqType": "put",
@@ -154,7 +154,7 @@
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2024-03-06T02:12:32.539Z",
-            "modified": "2024-03-06T04:53:48.290Z",
+            "modified": "2024-03-06T05:50:58.328Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -164,7 +164,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"courseName\":\"Biotecno I\"\n}",
+                "raw": "{\n  \"publicationTitle\": \"Messi\", \n  \"commentDate\": \"****\"\n}",
                 "form": []
             },
             "reqType": "del",
@@ -195,11 +195,11 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "myComments",
-            "url": "http://localhost:10433/tellMe/v1/comment",
+            "url": "http://localhost:10433/tellMe/v1/comment/my",
             "method": "GET",
             "sortNum": 63750,
             "created": "2024-03-06T02:12:37.535Z",
-            "modified": "2024-03-06T04:53:57.269Z",
+            "modified": "2024-03-06T06:18:18.972Z",
             "headers": [
                 {
                     "name": "x-access-token",

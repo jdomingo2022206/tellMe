@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "tellMe",
-    "dateExported": "2024-03-06T03:49:35.629Z",
+    "dateExported": "2024-03-06T05:25:15.589Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -10,11 +10,11 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "tellMe",
-            "url": "http://localhost:10433//tellMe/v1/publication",
+            "url": "http://localhost:10433/tellMe/v1/publication",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-02-13T01:43:18.192Z",
-            "modified": "2024-03-06T02:12:19.720Z",
+            "modified": "2024-03-06T04:53:22.702Z",
             "headers": [],
             "params": [],
             "reqType": "get",
@@ -25,21 +25,21 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "createMyPublication",
-            "url": "http://localhost:10433//tellMe/v1/publication",
+            "url": "http://localhost:10433/tellMe/v1/publication",
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-03-06T02:12:25.179Z",
-            "modified": "2024-03-06T03:39:38.673Z",
+            "modified": "2024-03-06T05:23:59.924Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": ""
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk2OTk3MTUsImV4cCI6MTcwOTcwMzMxNX0.Sa7aXOrrStMs12agxQyKWK-B2L--lb76JkkifH45MQ4"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\": \"Messi\", \n  \"categorieName\": \"Deportes\",\n  \"text\": \"Todo un crack el 10 argentino\"\n}",
+                "raw": "{\n  \"title\": \"Frankie de Jong\", \n  \"categorieName\": \"barcelona\",\n  \"text\": \"Autentico jefe del mediocampo, todo un motor el holandes\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -50,24 +50,24 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "updateMyPublication",
-            "url": "http://localhost:10433//tellMe/v1/publication",
+            "url": "http://localhost:10433/tellMe/v1/publication",
             "method": "PUT",
             "sortNum": 35000,
             "created": "2024-03-06T03:40:25.796Z",
-            "modified": "2024-03-06T03:41:53.068Z",
+            "modified": "2024-03-06T05:21:03.803Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": ""
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk2OTk3MTUsImV4cCI6MTcwOTcwMzMxNX0.Sa7aXOrrStMs12agxQyKWK-B2L--lb76JkkifH45MQ4"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\": \"Messi\", \n  \"date\": \"****\",\n  \"text\": \"Todo un crack el 10 argentino\"\n}",
+                "raw": "{\n  \"title\": \"Messi\", \n  \"date\": \"2024-03-06T05:01:31.560Z\",\n  \"text\": \"Todo un crack el 10 argentino, absolutamente el GOAT\"\n}",
                 "form": []
             },
-            "reqType": "post",
+            "reqType": "put",
             "tests": []
         },
         {
@@ -75,21 +75,21 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "deleteMyPublication",
-            "url": "http://localhost:10433//tellMe/v1/publication",
+            "url": "http://localhost:10433/tellMe/v1/publication",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2024-03-06T02:12:27.489Z",
-            "modified": "2024-03-06T03:42:28.855Z",
+            "modified": "2024-03-06T05:04:54.465Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNkNjQyNmMwMjg2NmI5NzZhZjgyOTUiLCJpYXQiOjE3MDgyMzYwNjMsImV4cCI6MTcwODIzOTY2M30.rRQ23yszT2xP48CdBcTupihIqRe0x5LMw3GwaJB6AhY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk2OTk3MTUsImV4cCI6MTcwOTcwMzMxNX0.Sa7aXOrrStMs12agxQyKWK-B2L--lb76JkkifH45MQ4"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\": \"Messi\", \n  \"date\": \"****\"\n}",
+                "raw": "{\n  \"title\": \"Messi\", \n  \"date\": \"2024-03-06T05:01:31.560Z\"\n}",
                 "form": []
             },
             "reqType": "del",
@@ -100,11 +100,11 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "commentAbout",
-            "url": "http://localhost:10433//tellMe/v1/comment",
+            "url": "http://localhost:10433/tellMe/v1/comment",
             "method": "POST",
             "sortNum": 50000,
             "created": "2024-03-06T02:12:30.038Z",
-            "modified": "2024-03-06T02:12:30.038Z",
+            "modified": "2024-03-06T04:53:40.114Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -125,11 +125,11 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "updateCommentAbout",
-            "url": "http://localhost:10433//tellMe/v1/comment",
+            "url": "http://localhost:10433/tellMe/v1/comment",
             "method": "PUT",
             "sortNum": 55000,
             "created": "2024-03-06T03:41:03.400Z",
-            "modified": "2024-03-06T03:41:23.567Z",
+            "modified": "2024-03-06T04:53:44.003Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -142,7 +142,7 @@
                 "raw": "{\n  \"courseName\":\"Etica\"\n}",
                 "form": []
             },
-            "reqType": "post",
+            "reqType": "put",
             "tests": []
         },
         {
@@ -150,11 +150,11 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "uncommentAbout",
-            "url": "http://localhost:10433//tellMe/v1/comment",
+            "url": "http://localhost:10433/tellMe/v1/comment",
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2024-03-06T02:12:32.539Z",
-            "modified": "2024-03-06T02:12:32.539Z",
+            "modified": "2024-03-06T04:53:48.290Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -167,7 +167,7 @@
                 "raw": "{\n  \"courseName\":\"Biotecno I\"\n}",
                 "form": []
             },
-            "reqType": "post",
+            "reqType": "del",
             "tests": []
         },
         {
@@ -175,15 +175,15 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "myPublications",
-            "url": "http://localhost:10433//tellMe/v1/publication/my",
+            "url": "http://localhost:10433/tellMe/v1/publication/my",
             "method": "GET",
             "sortNum": 62500,
             "created": "2024-03-06T02:12:35.055Z",
-            "modified": "2024-03-06T03:34:18.418Z",
+            "modified": "2024-03-06T05:17:38.283Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgyMzc1NjcsImV4cCI6MTcwODI0MTE2N30.oH2KtJF8gtX0UgQwbE_alyuM5i5mYXQVf6YbQg6pr3g"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk2OTk3MTUsImV4cCI6MTcwOTcwMzMxNX0.Sa7aXOrrStMs12agxQyKWK-B2L--lb76JkkifH45MQ4"
                 }
             ],
             "params": [],
@@ -195,11 +195,11 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "myComments",
-            "url": "http://localhost:10433//tellMe/v1/comment",
+            "url": "http://localhost:10433/tellMe/v1/comment",
             "method": "GET",
             "sortNum": 63750,
             "created": "2024-03-06T02:12:37.535Z",
-            "modified": "2024-03-06T02:12:37.535Z",
+            "modified": "2024-03-06T04:53:57.269Z",
             "headers": [
                 {
                     "name": "x-access-token",

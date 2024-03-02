@@ -1,7 +1,6 @@
 import { response, request } from "express";
-import Publication from './publication.model';
-import Categorie from "../categorie/categorie.model";
-import { isToken } from "../../helpers";
+import Categorie from "./categories.model.js";
+import { isToken } from "../../helpers/tk-metods.js";
 
 export const categoriesGet = async (req = request, res = response) => {
     const {limite, desde} = req.query;

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Category",
-    "dateExported": "2024-03-06T03:50:00.004Z",
+    "dateExported": "2024-03-06T05:25:10.287Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -10,21 +10,21 @@
             "colId": "a06d9208-7474-45f8-8a64-418182e243cf",
             "containerId": "",
             "name": "createCategory",
-            "url": "http://localhost:10433//tellMe/v1/categorie",
+            "url": "http://localhost:10433/tellMe/v1/categorie",
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-06T03:15:30.725Z",
-            "modified": "2024-03-06T03:18:46.902Z",
+            "modified": "2024-03-06T05:23:17.460Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgxODIwOTgsImV4cCI6MTcwODE4NTY5OH0.8nCc3xlmUN36EOkJ1l1QXJcKaadCktWm-yG5o7MSCws"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk2OTk3MTUsImV4cCI6MTcwOTcwMzMxNX0.Sa7aXOrrStMs12agxQyKWK-B2L--lb76JkkifH45MQ4"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"Deportes\",\n  \"desc\": \"Mundo Deportivo\"\n}",
+                "raw": "{\n  \"name\":\"Barcelona\",\n  \"desc\": \"Futbol Club Barcelona\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -35,11 +35,11 @@
             "colId": "a06d9208-7474-45f8-8a64-418182e243cf",
             "containerId": "",
             "name": "deleteCategory",
-            "url": "http://localhost:10433//tellMe/v1/categorie",
+            "url": "http://localhost:10433/tellMe/v1/categorie",
             "method": "DELETE",
             "sortNum": 15000,
             "created": "2024-03-06T03:19:03.558Z",
-            "modified": "2024-03-06T03:19:53.090Z",
+            "modified": "2024-03-06T04:52:41.638Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -52,7 +52,7 @@
                 "raw": "{\n  \"name\":\"Deportes\"\n}",
                 "form": []
             },
-            "reqType": "post",
+            "reqType": "del",
             "tests": []
         },
         {
@@ -60,14 +60,14 @@
             "colId": "a06d9208-7474-45f8-8a64-418182e243cf",
             "containerId": "",
             "name": "getCategory",
-            "url": "http://localhost:10433//tellMe/v1/categorie",
+            "url": "http://localhost:10433/tellMe/v1/categorie",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-06T03:15:35.499Z",
-            "modified": "2024-03-06T03:16:35.675Z",
+            "modified": "2024-03-06T04:52:28.774Z",
             "headers": [],
             "params": [],
-            "reqType": "post",
+            "reqType": "get",
             "tests": []
         }
     ]

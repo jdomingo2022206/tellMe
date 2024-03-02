@@ -1,10 +1,10 @@
 import { response, request } from "express";
 import bcryptjs from 'bcryptjs';
-import Publication from './publication.model';
-import User from '../user/user.model';
-import { isToken } from "../../helpers";
-import Categorie from "../categorie/categorie.model";
-import {createCategory} from '../categories/categories.controller';
+import Publication from './publication.model.js';
+// import User from '../user/user.model';
+import { isToken } from "../../helpers/tk-metods.js";
+import Categorie from "../categories/categories.model.js";
+// import {createCategory} from '../categories/categories.controller.js';
 
 export const publicationGet = async (req = request, res = response) => {
     const {limite, desde} = req.query;
@@ -41,11 +41,11 @@ export const createMyPublication = async (req, res) => {
         if (!user){
             return;
         }
-        const categorie = await Categorie.findOne({categorieName});
+        const categorie = await Categorie.findOne({name: categorieName});
         if (!categorie){
             return res.status(400).json({msg: 'La categoria no existe.'});
         }
-        const publication = new Publication({title, userId: user._id, userName: user.nombre, categorieName: categorie.name, categorieId: categorie._id, text});
+        const publication = new Publication({title, userId: user._id, userName: user.name, categorieName: categorie.name, categorieId: categorie._id, text});
         await publication.save();
         res.status(200).json({publication});
     } catch (error) {
@@ -73,7 +73,7 @@ export const deleteMyPublication = async (req, res) => {
         const publication = await Publication.findOne({title: title, date: date});
         if (!publication) {
             return res.status(400).json({ msg: 'La publicacion no existe.' });
-        }else if (publication.userId.toString() !== user._id) {
+        }else if (publication.userId.toString() !== user._id.toString()) {
             return res.status(400).json({ msg: `No estas autorizado para eliminar esta publicacion. Esta publicacion no te pertenece ${user.name} || ${user.mail}.` });
         } 
         publication.estado = false;
@@ -92,7 +92,7 @@ export const updateMyPublication = async (req, res) => {
         const publication = await Publication.findOne({title: title, date: date});
         if (!publication) {
             return res.status(400).json({ msg: 'La publicacion no existe.' });
-        }else if (publication.userId.toString() !== user._id) {
+        }else if (publication.userId.toString() !== user._id.toString()) {
             return res.status(400).json({ msg: `No estas autorizado para editar esta publicacion. Esta publicacion no te pertenece ${user.name} || ${user.mail}.` });
         } 
         await Publication.findByIdAndUpdate(publication._id, resto);

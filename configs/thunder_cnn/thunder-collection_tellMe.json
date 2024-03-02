@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "tellMe",
-    "dateExported": "2024-03-06T02:13:46.120Z",
+    "dateExported": "2024-03-06T03:49:35.629Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -29,7 +29,7 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-03-06T02:12:25.179Z",
-            "modified": "2024-03-06T02:12:25.179Z",
+            "modified": "2024-03-06T03:39:38.673Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -39,7 +39,32 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"courseName\": \"Etica\", \n  \"desc\": \"Curso de Etica a full todos los dias\"\n}",
+                "raw": "{\n  \"title\": \"Messi\", \n  \"categorieName\": \"Deportes\",\n  \"text\": \"Todo un crack el 10 argentino\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "0d8c1eaa-5222-4765-9f6d-d0eb2f379af9",
+            "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
+            "containerId": "",
+            "name": "updateMyPublication",
+            "url": "http://localhost:10433//tellMe/v1/publication",
+            "method": "PUT",
+            "sortNum": 35000,
+            "created": "2024-03-06T03:40:25.796Z",
+            "modified": "2024-03-06T03:41:53.068Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Messi\", \n  \"date\": \"****\",\n  \"text\": \"Todo un crack el 10 argentino\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -54,7 +79,7 @@
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2024-03-06T02:12:27.489Z",
-            "modified": "2024-03-06T02:12:27.489Z",
+            "modified": "2024-03-06T03:42:28.855Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -64,10 +89,10 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"courseName\": \"Etica\"\n}",
+                "raw": "{\n  \"title\": \"Messi\", \n  \"date\": \"****\"\n}",
                 "form": []
             },
-            "reqType": "post",
+            "reqType": "del",
             "tests": []
         },
         {
@@ -80,6 +105,31 @@
             "sortNum": 50000,
             "created": "2024-03-06T02:12:30.038Z",
             "modified": "2024-03-06T02:12:30.038Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgxODIwOTgsImV4cCI6MTcwODE4NTY5OH0.8nCc3xlmUN36EOkJ1l1QXJcKaadCktWm-yG5o7MSCws"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"courseName\":\"Etica\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "947e28f4-e30b-41c8-993c-0329b074b10b",
+            "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
+            "containerId": "",
+            "name": "updateCommentAbout",
+            "url": "http://localhost:10433//tellMe/v1/comment",
+            "method": "PUT",
+            "sortNum": 55000,
+            "created": "2024-03-06T03:41:03.400Z",
+            "modified": "2024-03-06T03:41:23.567Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -125,11 +175,11 @@
             "colId": "c4bc6d5d-1494-440c-9d64-11fccedea0ee",
             "containerId": "",
             "name": "myPublications",
-            "url": "http://localhost:10433//tellMe/v1/publication",
+            "url": "http://localhost:10433//tellMe/v1/publication/my",
             "method": "GET",
-            "sortNum": 70000,
+            "sortNum": 62500,
             "created": "2024-03-06T02:12:35.055Z",
-            "modified": "2024-03-06T02:12:35.055Z",
+            "modified": "2024-03-06T03:34:18.418Z",
             "headers": [
                 {
                     "name": "x-access-token",
@@ -147,7 +197,7 @@
             "name": "myComments",
             "url": "http://localhost:10433//tellMe/v1/comment",
             "method": "GET",
-            "sortNum": 80000,
+            "sortNum": 63750,
             "created": "2024-03-06T02:12:37.535Z",
             "modified": "2024-03-06T02:12:37.535Z",
             "headers": [

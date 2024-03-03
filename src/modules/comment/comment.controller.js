@@ -56,9 +56,14 @@ export const createMyComment = async (req, res) => {
         if (!publication){
             return res.status(400).json({msg: 'La publicacion no existe.'});
         }
+
         const comment = new Comment({userId: user._id, userName: user.name, publicationId: publication._id, publicationName: publication.title, comment: text});
         await comment.save();
-        res.status(200).json({comment});
+        publication.comments.push(comment._id);
+        await publication.save();
+        publication.commentsInfo.push(comment.comment);
+        await publication.save();
+        res.status(200).json({msg: `Publicacion:  ${publication.title} || Comentario: ${comment.comment} .`});
     } catch (error) {
         console.error('Error al crear el comentario:', error);
         res.status(500).json({ msg: 'Hubo un error al crear el comentario.' });
@@ -67,7 +72,7 @@ export const createMyComment = async (req, res) => {
 
 export const deleteMyComment = async (req, res) => {
     try {
-        const {publicationTitle, publicationDate, commentDate} = req.body;
+        const {publicationTitle, commentDate} = req.body;
         const user = await isToken(req, res);
         if (!user){
             return;

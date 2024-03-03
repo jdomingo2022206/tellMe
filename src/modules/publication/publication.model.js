@@ -20,7 +20,7 @@ const PublicationSchema = Schema({
   },
   categorieId: {
     type: Schema.Types.ObjectId,
-    ref: 'Catefories',
+    ref: 'Categories',
     required: [true, 'La cotegoria es obligatorio']
   },
   categorieName: {
@@ -36,6 +36,9 @@ const PublicationSchema = Schema({
   },
   comments: [{ 
     type: Schema.Types.ObjectId, ref: 'Comment' 
+  }],
+  commentsInfo: [{ 
+    type: String 
   }],
   estado: {
     type: Boolean,

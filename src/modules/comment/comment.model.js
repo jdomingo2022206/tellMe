@@ -22,7 +22,6 @@ const CommentSchema = Schema({
   publicationName: {
     type: String,
     required: [true, "El nombre de la publicacion es obligaroria"],
-    unique: true,
   },
   comment: {
     type: String,

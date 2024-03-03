@@ -9,6 +9,7 @@ import userRoutes from '../src/modules/user/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
 import categoriesRoutes from '../src/modules/categories/categories.routes.js';
 import publicationRoutes from '../src/modules/publication/publication.routes.js';
+import commentRoutes from '../src/modules/comment/comment.routes.js';
 
 class Server {
     constructor() {
@@ -44,7 +45,7 @@ class Server {
         this.app.use(this.userPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.publicationPath, publicationRoutes);
-        // this.app.use(this.commentPath, commentRoutes);
+        this.app.use(this.commentPath, commentRoutes);
         this.app.use(this.categoriePath, categoriesRoutes);
     }
 

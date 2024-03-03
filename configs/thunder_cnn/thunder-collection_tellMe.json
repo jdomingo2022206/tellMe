@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "tellMe",
-    "dateExported": "2024-03-06T06:18:56.914Z",
+    "dateExported": "2024-03-07T06:20:41.669Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -29,17 +29,17 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-03-06T02:12:25.179Z",
-            "modified": "2024-03-06T05:23:59.924Z",
+            "modified": "2024-03-07T04:31:38.715Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk2OTk3MTUsImV4cCI6MTcwOTcwMzMxNX0.Sa7aXOrrStMs12agxQyKWK-B2L--lb76JkkifH45MQ4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk3ODI5NzMsImV4cCI6MTcwOTc4NjU3M30.l3YBqJ8aKa4fz4uMYTlko5QQF6_oRBtEj_vpA2GLIVk"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\": \"Frankie de Jong\", \n  \"categorieName\": \"barcelona\",\n  \"text\": \"Autentico jefe del mediocampo, todo un motor el holandes\"\n}",
+                "raw": "{\r\n  \"title\": \"Novedades en JavaScript: ECMAScript 2022\",\r\n  \"categorieName\": \"JavaScript\",\r\n  \"text\": \"¡Explora las nuevas características de ECMAScript 2022 en JavaScript! Desde operadores novedosos hasta métodos de cadena mejorados, ¡hay mucho por descubrir! ¿Cuál es tu característica favorita de esta última versión?\"\r\n}\r\n",
                 "form": []
             },
             "reqType": "post",
@@ -104,17 +104,17 @@
             "method": "POST",
             "sortNum": 50000,
             "created": "2024-03-06T02:12:30.038Z",
-            "modified": "2024-03-06T05:47:36.002Z",
+            "modified": "2024-03-07T05:29:07.229Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgxODIwOTgsImV4cCI6MTcwODE4NTY5OH0.8nCc3xlmUN36EOkJ1l1QXJcKaadCktWm-yG5o7MSCws"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk3ODkxNDgsImV4cCI6MTcwOTc5Mjc0OH0.W5IhidimoRZDx5gXIk1nlUdQWAXlmUxKiRdbawgjR0I"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"publicationTitle\": \"Messi\", \n  \"publicationDate\": \"2024-03-06T05:01:31.560Z\",\n  \"text\": \"Todo un mago la pulga \"\n}",
+                "raw": "{\n  \"publicationTitle\": \"Messi: Un Acto de Respeto\", \n  \"publicationDate\": \"2024-03-07T04:10:30.243Z\",\n  \"text\": \"Grande en todos los apectos la pulga, el mejor de todos\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -129,17 +129,17 @@
             "method": "PUT",
             "sortNum": 55000,
             "created": "2024-03-06T03:41:03.400Z",
-            "modified": "2024-03-06T05:50:46.330Z",
+            "modified": "2024-03-07T06:18:48.395Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgxODIwOTgsImV4cCI6MTcwODE4NTY5OH0.8nCc3xlmUN36EOkJ1l1QXJcKaadCktWm-yG5o7MSCws"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk3ODkxNDgsImV4cCI6MTcwOTc5Mjc0OH0.W5IhidimoRZDx5gXIk1nlUdQWAXlmUxKiRdbawgjR0I"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"publicationTitle\": \"Messi\", \n  \"commentDate\": \"****\",\n  \"comment\": \"Alto genio\"\n}",
+                "raw": "{\n  \"publicationTitle\": \"Messi: Un Acto de Respeto\", \n  \"commentDate\": \"2024-03-07T05:29:08.239Z\",\n  \"comment\": \"Crack\"\n}",
                 "form": []
             },
             "reqType": "put",
@@ -154,17 +154,17 @@
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2024-03-06T02:12:32.539Z",
-            "modified": "2024-03-06T05:50:58.328Z",
+            "modified": "2024-03-07T05:43:02.646Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgxNTA4MzEsImV4cCI6MTcwODE1NDQzMX0.LoX4nWY9go8oItRmsLZWwFzCdOulr-U1x0p3PYOqJyU"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk3ODkxNDgsImV4cCI6MTcwOTc5Mjc0OH0.W5IhidimoRZDx5gXIk1nlUdQWAXlmUxKiRdbawgjR0I"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"publicationTitle\": \"Messi\", \n  \"commentDate\": \"****\"\n}",
+                "raw": "{\n  \"publicationTitle\": \"Messi: Un Acto de Respeto\", \n  \"commentDate\": \"2024-03-07T05:29:08.239Z\"\n}",
                 "form": []
             },
             "reqType": "del",
@@ -179,11 +179,11 @@
             "method": "GET",
             "sortNum": 62500,
             "created": "2024-03-06T02:12:35.055Z",
-            "modified": "2024-03-06T05:17:38.283Z",
+            "modified": "2024-03-07T05:25:57.658Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk2OTk3MTUsImV4cCI6MTcwOTcwMzMxNX0.Sa7aXOrrStMs12agxQyKWK-B2L--lb76JkkifH45MQ4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk3ODkxNDgsImV4cCI6MTcwOTc5Mjc0OH0.W5IhidimoRZDx5gXIk1nlUdQWAXlmUxKiRdbawgjR0I"
                 }
             ],
             "params": [],
@@ -199,11 +199,11 @@
             "method": "GET",
             "sortNum": 63750,
             "created": "2024-03-06T02:12:37.535Z",
-            "modified": "2024-03-06T06:18:18.972Z",
+            "modified": "2024-03-07T05:30:05.239Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWNjNGY5NGFhNTZlYmZlZTdiZmYzNWUiLCJpYXQiOjE3MDgyMzc1NjcsImV4cCI6MTcwODI0MTE2N30.oH2KtJF8gtX0UgQwbE_alyuM5i5mYXQVf6YbQg6pr3g"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk3ODkxNDgsImV4cCI6MTcwOTc5Mjc0OH0.W5IhidimoRZDx5gXIk1nlUdQWAXlmUxKiRdbawgjR0I"
                 }
             ],
             "params": [],

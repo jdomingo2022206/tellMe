@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Category",
-    "dateExported": "2024-03-06T06:19:15.556Z",
+    "dateExported": "2024-03-07T06:21:05.310Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-06T03:15:30.725Z",
-            "modified": "2024-03-06T05:23:17.460Z",
+            "modified": "2024-03-07T04:26:21.700Z",
             "headers": [
                 {
                     "name": "x-access-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk2OTk3MTUsImV4cCI6MTcwOTcwMzMxNX0.Sa7aXOrrStMs12agxQyKWK-B2L--lb76JkkifH45MQ4"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTU0MTdkOWJkYjgwNGIwYWZmOTQiLCJpYXQiOjE3MDk3ODI5NzMsImV4cCI6MTcwOTc4NjU3M30.l3YBqJ8aKa4fz4uMYTlko5QQF6_oRBtEj_vpA2GLIVk"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"Barcelona\",\n  \"desc\": \"Futbol Club Barcelona\"\n}",
+                "raw": "{\r\n  \"name\": \"Guatemala\",\r\n  \"desc\": \"Descubre la belleza y la cultura de Guatemala: viajes, turismo, gastronomía, historia, eventos culturales y mucho más sobre este hermoso país centroamericano.\"\r\n}\r\n",
                 "form": []
             },
             "reqType": "post",

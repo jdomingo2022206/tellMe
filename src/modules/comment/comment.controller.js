@@ -92,24 +92,93 @@ export const deleteMyComment = async (req, res) => {
     }
 }
 
+// export const updateMyComment = async (req, res) => {
+//     try {
+//         const {publicationTitle, commentDate, ...resto} = req.body;
+//         const user = await isToken(req, res);
+//         if (!user){
+//             return;
+//         }
+//         const comment = await Comment.findOne({userId: user._id, publicationName: publicationTitle, date: commentDate});
+//         if (!comment) {
+//             return res.status(400).json({ msg: 'El comentario no existe.' });
+//         }else if (comment.userId.toString() !== user._id.toString()) {
+//             return res.status(400).json({ msg: `No estas autorizado para editar este comentario. Este comentario no te pertenece ${user.name} || ${user.mail}.` });
+//         } 
+//         await Comment.findByIdAndUpdate(comment._id, resto);
+//         res.status(200).json({ msg: `El comentario ${comment.comment} ha sido actualizado.` });
+//     } catch (e) {
+//         console.error('Error al actualizar el comentario:', e);
+//         res.status(500).json({ msg: 'Hubo un error al actualizar el comentario.' });
+//     }
+
+// }
+
+// export const updateMyComment = async (req, res) => {
+//     try {
+//         const { publicationTitle, commentDate, ...resto } = req.body;
+//         const user = await isToken(req, res);
+//         if (!user) {
+//             return;
+//         }
+        
+//         // Encontrar y actualizar el comentario
+//         const comment = await Comment.findOneAndUpdate(
+//             { userId: user._id, publicationName: publicationTitle, date: commentDate },
+//             resto,
+//             { new: true } // Para obtener el comentario actualizado
+//         );
+        
+//         if (!comment) {
+//             return res.status(400).json({ msg: 'El comentario no existe.' });
+//         } else if (comment.userId.toString() !== user._id.toString()) {
+//             return res.status(400).json({ msg: `No estás autorizado para editar este comentario. Este comentario no te pertenece.` });
+//         } 
+        
+//         // Actualizar el texto del comentario en la publicación asociada
+//         await Publication.findOneAndUpdate(
+//             { title: publicationTitle, 'comments._id': comment._id },
+//             { $set: { 'comments.$.comment': resto.comment } }
+//         );
+
+//         res.status(200).json({ msg: `El comentario "${comment.comment}" ha sido actualizado.` });
+//     } catch (e) {
+//         console.error('Error al actualizar el comentario:', e);
+//         res.status(500).json({ msg: 'Hubo un error al actualizar el comentario.' });
+//     }
+// }
+
 export const updateMyComment = async (req, res) => {
     try {
-        const {publicationTitle, commentDate, ...resto} = req.body;
+        const { publicationTitle, commentDate, comment } = req.body; // Obtener el comentario actualizado
         const user = await isToken(req, res);
-        if (!user){
+        if (!user) {
             return;
         }
-        const comment = await Comment.findOne({userId: user._id, publicationName: publicationTitle, date: commentDate});
-        if (!comment) {
+        
+        // Encontrar y actualizar el comentario
+        const updatedComment = await Comment.findOneAndUpdate(
+            { userId: user._id, publicationName: publicationTitle, date: commentDate },
+            { comment: comment }, // Actualizar el campo comment con el nuevo valor
+            { new: true } // Para obtener el comentario actualizado
+        );
+        
+        if (!updatedComment) {
             return res.status(400).json({ msg: 'El comentario no existe.' });
-        }else if (comment.userId.toString() !== user._id.toString()) {
-            return res.status(400).json({ msg: `No estas autorizado para editar este comentario. Este comentario no te pertenece ${user.name} || ${user.mail}.` });
+        } else if (updatedComment.userId.toString() !== user._id.toString()) {
+            return res.status(400).json({ msg: `No estás autorizado para editar este comentario. Este comentario no te pertenece.` });
         } 
-        await Comment.findByIdAndUpdate(comment._id, resto);
-        res.status(200).json({ msg: `El comentario ${comment.comment} ha sido actualizado.` });
+        
+        // Actualizar el campo commentInfo en la publicación asociada
+        await Publication.findOneAndUpdate(
+            { title: publicationTitle },
+            { $push: { commentsInfo: comment } } // Agregar el nuevo comentario al array de comentarios en la publicación
+        );
+
+        res.status(200).json({ msg: `El comentario "${comment}" ha sido actualizado.` });
     } catch (e) {
         console.error('Error al actualizar el comentario:', e);
         res.status(500).json({ msg: 'Hubo un error al actualizar el comentario.' });
     }
-
 }
+

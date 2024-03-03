@@ -16,7 +16,7 @@ const CommentSchema = Schema({
   },
   publicationId: {
     type: Schema.Types.ObjectId,
-    ref: 'Catefories',
+    ref: 'Publication',
     required: [true, 'La publicacion es obligatoria']
   },
   publicationName: {

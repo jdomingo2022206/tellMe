@@ -25,7 +25,8 @@ const PublicationSchema = Schema({
   },
   categorieName: {
     type: String,
-    required: [true, "El nombre de la categoria es obligaroria"]
+    required: [true, "El nombre de la categoria es obligatorio"],
+    unique: false 
   },
   text: {
     type: String,
@@ -46,10 +47,5 @@ const PublicationSchema = Schema({
   },
 });
 
-// PublicSchema.methods.toJSON = function(){
-//   const { __v, userId, userName, _id, ...public} = this.toObject();
-//   public.uid = _id;
-//   return usuario;
-// }
 
 export default model('Publication', PublicationSchema);

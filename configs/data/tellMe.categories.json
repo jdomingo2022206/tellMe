@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "65e93d7ac1ca20bab191285d"
+  },
+  "name": "#deportes",
+  "desc": "Todo lo relacionado con eventos deportivos, noticias de deportes, equipos y atletas destacados, así como consejos y guías para mantenerse activo y saludable.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:07:22.500Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e93d8ac1ca20bab1912862"
+  },
+  "name": "#noticias",
+  "desc": "Información actualizada sobre eventos y acontecimientos relevantes a nivel local, nacional e internacional, incluyendo política, economía, cultura, ciencia y tecnología.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:07:38.699Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e93da5c1ca20bab1912867"
+  },
+  "name": "#programación",
+  "desc": "Recursos, tutoriales y discusiones relacionadas con la programación de software, desarrollo web y móvil, lenguajes de programación, frameworks y herramientas para desarrolladores.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:08:05.252Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e93db5c1ca20bab191286c"
+  },
+  "name": "#ciberseguridad",
+  "desc": "Artículos, consejos y noticias relacionados con la protección de datos, seguridad informática, amenazas cibernéticas, privacidad en línea y mejores prácticas de seguridad digital.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:08:21.561Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e93deec1ca20bab1912871"
+  },
+  "name": "#kinal",
+  "desc": "Información sobre el centro educativo Kinal, sus programas académicos, actividades estudiantiles, logros y noticias relevantes para la comunidad educativa.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:09:18.027Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e941d2c1ca20bab1912896"
+  },
+  "name": "#javascript",
+  "desc": "Todo relacionado con el lenguaje de programación JavaScript: noticias, tutoriales, consejos y recursos para mejorar tus habilidades de desarrollo web.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:25:54.644Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e941d9c1ca20bab191289b"
+  },
+  "name": "#github",
+  "desc": "Recursos y consejos para aprovechar al máximo la plataforma de desarrollo colaborativo GitHub: control de versiones, colaboración en proyectos y mejores prácticas.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:26:01.989Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e941e2c1ca20bab19128a0"
+  },
+  "name": "#node.js",
+  "desc": "Explora el ecosistema de Node.js: desarrollo de aplicaciones del lado del servidor, creación de APIs RESTful, manejo de paquetes y módulos, y más.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:26:10.444Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e941e7c1ca20bab19128a5"
+  },
+  "name": "#apple",
+  "desc": "Todas las novedades sobre Apple: lanzamientos de productos, actualizaciones de software, noticias de la industria y opiniones sobre los dispositivos y servicios de Apple.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:26:15.867Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e941edc1ca20bab19128aa"
+  },
+  "name": "#guatemala",
+  "desc": "Descubre la belleza y la cultura de Guatemala: viajes, turismo, gastronomía, historia, eventos culturales y mucho más sobre este hermoso país centroamericano.",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:26:21.696Z"
+  },
+  "__v": 0
+}]

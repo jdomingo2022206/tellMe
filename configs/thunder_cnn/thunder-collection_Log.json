@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Log",
-    "dateExported": "2024-03-07T06:20:48.861Z",
+    "dateExported": "2024-03-07T06:49:06.284Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-02-16T16:20:10.037Z",
-            "modified": "2024-03-06T04:35:15.198Z",
+            "modified": "2024-03-07T06:41:07.147Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"mail\":\"user1@kinal.edu.gt\",\n  \"password\":\"uss\"\n}",
+                "raw": "{\n  \"mail\":\"admin1@kinal.edu.gt\",\n  \"password\":\"adm\"\n}",
                 "form": []
             },
             "reqType": "post",

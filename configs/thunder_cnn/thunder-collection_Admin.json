@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Admin",
-    "dateExported": "2024-03-07T06:20:54.070Z",
+    "dateExported": "2024-03-07T06:49:11.283Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,7 +14,7 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-13T01:43:18.245Z",
-            "modified": "2024-03-05T04:52:55.997Z",
+            "modified": "2024-03-07T06:24:28.833Z",
             "headers": [],
             "params": [],
             "body": {
@@ -22,6 +22,7 @@
                 "raw": "{\n  \"name\":\"user\",\n  \"mail\":\"user1@kinal.edu.gt\",\n  \"password\":\"uss\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
@@ -48,13 +49,19 @@
             "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
             "containerId": "",
             "name": "userGet",
-            "url": "http://localhost:10433/academic/user",
+            "url": "http://localhost:10433/tellMe/v1/user/",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-02-13T01:43:18.246Z",
-            "modified": "2024-02-13T01:43:18.246Z",
-            "headers": [],
+            "modified": "2024-03-07T06:41:19.334Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTRkODhjM2YyYjU2MjU3YzNmZTYiLCJpYXQiOjE3MDk3OTM2NjcsImV4cCI6MTcwOTc5NzI2N30.FgQWY9AmnQxNmB0G79id1RnpGlNRPQMWtRVqqUuNjB8"
+                }
+            ],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {
@@ -62,13 +69,19 @@
             "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
             "containerId": "",
             "name": "getUserById",
-            "url": "http://localhost:10433/academic/user/65cd6426c02866b76af8295",
+            "url": "http://localhost:10433/tellMe/v1/user/65e95d92d2932c83c9a4c11c",
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-02-13T01:43:18.247Z",
-            "modified": "2024-02-15T01:14:03.181Z",
-            "headers": [],
+            "modified": "2024-03-07T06:42:27.916Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTRkODhjM2YyYjU2MjU3YzNmZTYiLCJpYXQiOjE3MDk3OTM2NjcsImV4cCI6MTcwOTc5NzI2N30.FgQWY9AmnQxNmB0G79id1RnpGlNRPQMWtRVqqUuNjB8"
+                }
+            ],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {
@@ -76,18 +89,24 @@
             "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
             "containerId": "",
             "name": "userPut",
-            "url": "http://localhost:10433/academic/user/id",
+            "url": "http://localhost:10433/tellMe/v1/user",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-02-13T01:43:18.248Z",
-            "modified": "2024-02-13T01:43:18.248Z",
-            "headers": [],
+            "modified": "2024-03-07T06:48:20.759Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTRkODhjM2YyYjU2MjU3YzNmZTYiLCJpYXQiOjE3MDk3OTM2NjcsImV4cCI6MTcwOTc5NzI2N30.FgQWY9AmnQxNmB0G79id1RnpGlNRPQMWtRVqqUuNjB8"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\":\"Paquita la del barrio\"\n}",
+                "raw": "{\n  \"_id\": \"65e95d92d2932c83c9a4c11c\",\n  \"name\":\"Marco\"\n}",
                 "form": []
             },
+            "reqType": "put",
             "tests": []
         },
         {
@@ -95,13 +114,19 @@
             "colId": "12ca205c-20ac-473f-8f55-6df9ce40274b",
             "containerId": "",
             "name": "userDelete",
-            "url": "http://localhost:10433/academic/user/65cc4f97aa56ebfee7bff361",
+            "url": "http://localhost:10433/tellMe/v1/user/65e95d92d2932c83c9a4c11c",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2024-02-13T01:43:18.249Z",
-            "modified": "2024-02-15T01:06:03.814Z",
-            "headers": [],
+            "modified": "2024-03-07T06:43:19.251Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTRkODhjM2YyYjU2MjU3YzNmZTYiLCJpYXQiOjE3MDk3OTM2NjcsImV4cCI6MTcwOTc5NzI2N30.FgQWY9AmnQxNmB0G79id1RnpGlNRPQMWtRVqqUuNjB8"
+                }
+            ],
             "params": [],
+            "reqType": "del",
             "tests": []
         },
         {

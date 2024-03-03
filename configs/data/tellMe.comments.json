@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "65e950a4516b6eb5d9a1848c"
+  },
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "publicationId": {
+    "$oid": "65e93e36c1ca20bab191287d"
+  },
+  "publicationName": "Messi: Un Acto de Respeto",
+  "comment": "Crack",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T05:29:08.239Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e96455c37f9d81d72685f7"
+  },
+  "userId": {
+    "$oid": "65e95d6bd2932c83c9a4c113"
+  },
+  "userName": "juan",
+  "publicationId": {
+    "$oid": "65e93e85c1ca20bab1912882"
+  },
+  "publicationName": "Últimas Noticias: Protestas en la Ciudad",
+  "comment": "Vamos, el pueblo unido jamas sera vencido",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T06:53:09.003Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e9648dc37f9d81d7268602"
+  },
+  "userId": {
+    "$oid": "65e95d6bd2932c83c9a4c113"
+  },
+  "userName": "juan",
+  "publicationId": {
+    "$oid": "65e93e8dc1ca20bab1912887"
+  },
+  "publicationName": "Nuevo Lenguaje de Programación en el Horizonte",
+  "comment": "Wow!!!, que rapido se desarrolla la tecnologia",
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T06:54:05.152Z"
+  },
+  "__v": 0
+}]

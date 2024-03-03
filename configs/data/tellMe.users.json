@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "65e6a4d88c3f2b56257c3fe6"
+  },
+  "name": "admin",
+  "mail": "admin1@kinal.edu.gt",
+  "password": "$2a$10$euvXvQtLs6wgvBHvDi827eYOVFL3q88d2SM2BpM13icUwrzMb0BDm",
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "google": true,
+  "date": {
+    "$date": "2024-03-05T04:51:36.925Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "name": "user",
+  "mail": "user1@kinal.edu.gt",
+  "password": "$2a$10$sMYmKMwbtHMrKBzbM26w6uBdgmp9EeF3sLlPeNUY1ugT.tFJ01zW6",
+  "role": "USER_ROLE",
+  "estado": true,
+  "google": true,
+  "date": {
+    "$date": "2024-03-05T04:53:21.598Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e95d6bd2932c83c9a4c113"
+  },
+  "name": "juan",
+  "mail": "juan@kinal.edu.gt",
+  "password": "$2a$10$zzTgWg.nNqXrMg70xXz0E.VwGSfVdK39WXptz3b4Lqwwa2OSu7Upa",
+  "role": "USER_ROLE",
+  "estado": true,
+  "google": true,
+  "date": {
+    "$date": "2024-03-07T06:23:39.253Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e95d7ad2932c83c9a4c116"
+  },
+  "name": "andrea",
+  "mail": "andrea@kinal.edu.gt",
+  "password": "$2a$10$Nq2EWIwgNjMeTn2W1dg/.O6GiCsg3Yplh4estmL/EEKeXBaJD.QhO",
+  "role": "USER_ROLE",
+  "estado": true,
+  "google": true,
+  "date": {
+    "$date": "2024-03-07T06:23:54.471Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e95d87d2932c83c9a4c119"
+  },
+  "name": "sofia",
+  "mail": "sofia@kinal.edu.gt",
+  "password": "$2a$10$tWyC7.GUn083eCPOmchxFOWqVwptrlExD/gyw17fEWu.QVHkvdPOi",
+  "role": "USER_ROLE",
+  "estado": true,
+  "google": true,
+  "date": {
+    "$date": "2024-03-07T06:24:07.557Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e95d92d2932c83c9a4c11c"
+  },
+  "name": "Marco",
+  "mail": "marco@kinal.edu.gt",
+  "password": "$2a$10$x9CQLRHpBCj23FiVRTfMkOT0i3K.DBEOEoA5lcCH5W6e4IA2epYWi",
+  "role": "USER_ROLE",
+  "estado": true,
+  "google": true,
+  "date": {
+    "$date": "2024-03-07T06:24:18.252Z"
+  },
+  "__v": 0
+}]

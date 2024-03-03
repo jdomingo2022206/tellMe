@@ -1,0 +1,228 @@
+[{
+  "_id": {
+    "$oid": "65e93e36c1ca20bab191287d"
+  },
+  "title": "Messi: Un Acto de Respeto",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e93d7ac1ca20bab191285d"
+  },
+  "categorieName": "#deportes",
+  "text": "Lionel Messi ha entregado su octavo Balón de Oro para que sea exhibido en el museo del FC Barcelona, un gesto que resalta su admiración y lealtad hacia el club que lo vio crecer.",
+  "comments": [
+    {
+      "$oid": "65e950a4516b6eb5d9a1848c"
+    }
+  ],
+  "commentsInfo": [
+    "Grande en todos los apectos la pulga, el mejor de todos",
+    "Idolo",
+    "Crack"
+  ],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:10:30.243Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "65e93e85c1ca20bab1912882"
+  },
+  "title": "Últimas Noticias: Protestas en la Ciudad",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e93d8ac1ca20bab1912862"
+  },
+  "categorieName": "#noticias",
+  "text": "Las protestas en el centro de la ciudad continúan hoy, exigiendo cambios significativos en la política local. ¿Cuál es tu opinión sobre la situación actual?",
+  "comments": [],
+  "commentsInfo": [],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:11:49.468Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e93e8dc1ca20bab1912887"
+  },
+  "title": "Nuevo Lenguaje de Programación en el Horizonte",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e93da5c1ca20bab1912867"
+  },
+  "categorieName": "#programación",
+  "text": "Se rumorea que un nuevo lenguaje de programación revolucionario está en desarrollo. ¿Cuál crees que será su mayor innovación?",
+  "comments": [],
+  "commentsInfo": [],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:11:57.582Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e93e94c1ca20bab191288c"
+  },
+  "title": "Advertencia de Seguridad: Aumentan los Casos de Phishing",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e93db5c1ca20bab191286c"
+  },
+  "categorieName": "#ciberseguridad",
+  "text": "Se reporta un aumento en los casos de phishing en línea, con más usuarios siendo víctimas de ataques de suplantación de identidad. ¿Qué medidas tomas para proteger tu información personal?",
+  "comments": [],
+  "commentsInfo": [],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:12:04.807Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e93e9cc1ca20bab1912891"
+  },
+  "title": "Celebrando el Talento Estudiantil en Kinal",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e93deec1ca20bab1912871"
+  },
+  "categorieName": "#kinal",
+  "text": "Hoy celebramos los logros de nuestros brillantes estudiantes en Kinal. Desde proyectos de investigación hasta competencias deportivas, nuestros alumnos continúan demostrando su excelencia académica y compromiso con la comunidad. ¡Felicidades a todos los estudiantes!",
+  "comments": [],
+  "commentsInfo": [],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:12:12.948Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e94309c1ca20bab19128b1"
+  },
+  "title": "TIKAL: El Mundo de los Mayas",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e941edc1ca20bab19128aa"
+  },
+  "categorieName": "#guatemala",
+  "text": "Ubicada en el departamento de Petén, Tikal es uno de los sitios arqueológicos más impresionantes del mundo maya. Sus imponentes pirámides, templos y palacios ofrecen una ventana al antiguo imperio maya y su rica historia. ¿Has tenido la oportunidad de visitar Tikal? ¡Comparte tus experiencias y fotos con nosotros!",
+  "comments": [],
+  "commentsInfo": [],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:31:05.224Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e94313c1ca20bab19128b6"
+  },
+  "title": "Rumores sobre el Próximo iPhone",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e941e7c1ca20bab19128a5"
+  },
+  "categorieName": "#apple",
+  "text": "¡Atención, fanáticos de Apple! Los rumores sobre el próximo iPhone están en todas partes. Desde cámaras mejoradas hasta diseños innovadores, ¡las especulaciones son infinitas! ¿Qué función te gustaría ver en el próximo lanzamiento de Apple?",
+  "comments": [],
+  "commentsInfo": [],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:31:15.508Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e9431ec1ca20bab19128bb"
+  },
+  "title": "Construyendo Aplicaciones con Node.js",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e941e2c1ca20bab19128a0"
+  },
+  "categorieName": "#node.js",
+  "text": "Aprende a construir aplicaciones web potentes con Node.js. Desde la configuración del servidor hasta el enrutamiento de URL, ¡las posibilidades son infinitas! ¿Qué proyecto estás desarrollando actualmente con Node.js?",
+  "comments": [],
+  "commentsInfo": [],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:31:26.208Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e94325c1ca20bab19128c0"
+  },
+  "title": "Colaboración Efectiva en GitHub",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e941d9c1ca20bab191289b"
+  },
+  "categorieName": "#github",
+  "text": "Descubre los secretos para una colaboración efectiva en GitHub. Desde la creación de bifurcaciones hasta la revisión de solicitudes de extracción, ¡hay muchas formas de contribuir a proyectos emocionantes! ¿Cuál es tu experiencia más memorable trabajando en GitHub?",
+  "comments": [],
+  "commentsInfo": [],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:31:33.653Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e9432ac1ca20bab19128c5"
+  },
+  "title": "Novedades en JavaScript: ECMAScript 2022",
+  "userId": {
+    "$oid": "65e6a5417d9bdb804b0aff94"
+  },
+  "userName": "user",
+  "categorieId": {
+    "$oid": "65e941d2c1ca20bab1912896"
+  },
+  "categorieName": "#javascript",
+  "text": "¡Explora las nuevas características de ECMAScript 2022 en JavaScript! Desde operadores novedosos hasta métodos de cadena mejorados, ¡hay mucho por descubrir! ¿Cuál es tu característica favorita de esta última versión?",
+  "comments": [],
+  "commentsInfo": [],
+  "estado": true,
+  "date": {
+    "$date": "2024-03-07T04:31:38.709Z"
+  },
+  "__v": 0
+}]

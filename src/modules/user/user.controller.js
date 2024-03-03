@@ -1,11 +1,13 @@
-import { response, json } from "express";
+import e, { response, json } from "express";
 import bcryptjs from "bcryptjs";
 import {isToken} from "../../helpers/tk-metods.js";
 import User from "./user.model.js";
 
 const verifyAdmin = async (user, res) =>{
     if (user.role !== 'ADMIN_ROLE') {
-        return res.status(403).json({ msg: 'No estas autorizado.' });
+        res.status(403).json({ msg: 'No estas autorizado.' });
+        console.log('No estas autorizado.');
+        throw new Error('No estas autorizado.');
     }
     console.log('* Admin auth ;) ***');
     return;
@@ -16,7 +18,11 @@ export const userGet = async (req, res = response ) => {
     console.log('--- [NOTES] userGet.user')
     try {
         const user = await isToken(req, res);
+        if (!user) {
+            return;
+        }
         await verifyAdmin(user, res);
+        
         const { limite, desde } = req.query;
         const query = { estado: true};
 
@@ -33,7 +39,7 @@ export const userGet = async (req, res = response ) => {
         });
     } catch (e) {
         console.log('Hubo un error al obtener usuarios.');
-        res.status(500).json({ msg: 'Hubo un error al obtener usuarios. Error ${e.status}: ${e.message}' });
+        //res.status(500).json({ msg: 'Hubo un error al obtener usuarios. Error ${e.status}: ${e.message}' });
         // throw new Error(e);
     }
 } 
@@ -62,11 +68,11 @@ export const userPut = async (req, res) => {
     try {
         const user = await isToken(req, res);
         await verifyAdmin(user, res);
-        const { id } = req.params;
+        // const { id } = req.params;
         const { _id, google, mail, ...resto} = req.body;
-        await User.findByIdAndUpdate(id, resto);
+        await User.findByIdAndUpdate(_id, resto);
 
-        const userFind = await User.findOne({_id: id});
+        const userFind = await User.findOne({_id: _id});
 
         res.status(200).json({
             msg: 'Usuario Actualizado exitosamente',

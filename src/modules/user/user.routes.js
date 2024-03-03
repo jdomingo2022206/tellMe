@@ -28,11 +28,11 @@ router.get(
     ], getUserByid);
 
 router.put(
-    "/:id",
+    "/",
     [   
         validateJWT,
-        check("id","El id no es un formato válido de MongoDB").isMongoId(),
-        check("id").custom(existentUserById),
+        check("_id","El id no es un formato válido de MongoDB").isMongoId(),
+        check("_id").custom(existentUserById),
         validateCampus
     ], userPut);
 

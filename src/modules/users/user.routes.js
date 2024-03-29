@@ -1,70 +1,59 @@
-import { Router } from "express";
-import { check } from "express-validator";
-import {
-  usuariosGet,
-  usuariosPost,
-  getUsuarioById,
-  usuariosPut,
-  usuariosDelete,
-} from "./user.controller.js";
-import {
-  existenteEmail,
-  esRoleValido,
-  existeUsuarioById,
-} from "../../helpers/db-validators.js";
-import { validarCampos } from "../middlewares/validar-campos.js";
-import { tieneRole } from "../../middlewares/validar-roles.js";
-import { validarJWT } from "../../middlewares/validar-jwt.js";
-
+const { Router } = require('express');
+const { check } = require('express-validator');
+const { validateCampus } = require('../middlewares/validate-campus');
+const { existentEmail, existentUserById, roleValid} = require('../helpers/db-validators');
+const { userDelete, userPost, userTeacherPost, userGet, getUserByid, userPut, editMyProfile } = require('../controllers/user.controller');
 const router = Router();
 
-router.get("/", usuariosGet);
+router.get("/", userGet);
+
+router.put('/editMyProfile', editMyProfile);
 
 router.get(
-  "/:id",
-  [
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
-  ],
-  getUsuarioById
-);
-
-router.post(
-  "/",
-  [
-    check("nombre", "El nombre es obligatorio").not().isEmpty(),
-    check("password", "El password debe ser mayor a 6 caracteres").isLength({
-      min: 6,
-    }),
-    check("correo", "Este no es un correo válido").isEmail(),
-    check("correo").custom(existenteEmail),
-    check("role").custom(esRoleValido),
-    validarCampos,
-  ],
-  usuariosPost
-);
+    "/:id",
+    [
+        check("id","El id no es un formato válido de MongoDB").isMongoId(),
+        check("id").custom(existentUserById),
+        validateCampus
+    ], getUserByid);
 
 router.put(
-  "/:id",
-  [
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
-  ],
-  usuariosPut
-);
+    "/:id",
+    [
+        check("id","El id no es un formato válido de MongoDB").isMongoId(),
+        check("id").custom(existentUserById),
+        validateCampus
+    ], userPut);
 
 router.delete(
-  "/:id",
-  [
-    validarJWT,
-    tieneRole("ADMIN_ROLE", "VENTAS_ROLE"),
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
-  ],
-  usuariosDelete
-);
+        "/:id",
+        [
+            check("id","El id no es un formato válido de MongoDB").isMongoId(),
+            check("id").custom(existentUserById),
+            validateCampus
+        ], userDelete);
 
-export default router;
+        
+router.post(
+    "/", 
+    [
+        check("name","El nombre es obligatorio").not().isEmpty(),
+        check("password","El password debe ser mayor a 6 caracteres").isLength({min: 6,}),
+        check("mail","Este no es un correo válido").isEmail(),
+        check("mail").custom(existentEmail),
+        check("role").custom(roleValid),
+    ], userPost); 
+
+router.post(
+    "/teacher", 
+    [
+        check("name","El nombre es obligatorio").not().isEmpty(),
+        check("password","El password debe ser mayor a 6 caracteres").isLength({min: 6,}),
+        check("mail","Este no es un correo válido").isEmail(),
+        check("mail").custom(existentEmail),
+        validateCampus,
+    ], userTeacherPost); 
+
+
+
+module.exports = router;

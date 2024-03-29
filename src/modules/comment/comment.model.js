@@ -10,6 +10,10 @@ const CommentSchema = mongoose.Schema({
     type: String,
     required: [true, "El nombre del user que comenta es obligarorio"]
   },
+  date:{
+    type: Date,
+    default: Date.now
+  },
   publicationId: {
     type: Schema.Types.ObjectId,
     ref: 'Catefories',

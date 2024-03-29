@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
 const UserSchema = mongoose.Schema({
-  nombre: {
+  name: {
     type: String,
     required: [true, "El nombre es obligatorio"],
   },
-  correo: {
+  mail: {
     type: String,
     required: [true, "El correo es obligarorio"],
     unique: true,

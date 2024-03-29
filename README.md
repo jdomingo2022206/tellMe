@@ -1,1 +1,52 @@
-# tellMe
+# Overview
+This project do all wathever is suposed to do.
+
+> **Note:** The **tellMe** was inspired by the `myspace` forum.
+> [![myspace](https://forum.huawei.com/enterprise/api/file/v1/small/thread/667229096909869056.jpg?appid=esc_es)](https://es.wikipedia.org/wiki/Myspace)
+
+## How run the project?
+
+1. Install node dependencies
+```
+nmp i dependence_name
+```
+2.  Install execution environment
+```
+npm i --save-dev nodemon
+```
+
+3. Import data to MongoDB from 
+```
+./tellMe/configs/data
+```
+
+4. Import thunder connection from 
+```
+./tellMe/configs/thunder_cnn
+```
+5. Run project 
+```
+  npm run dev
+```
+
+## Create Token
+
+> This are the credentials to generate your token
+
+
+|Role                |User                          |Pass                         |
+|----------------|-------------------------------|-----------------------------|
+|User			 |`'user'`            |`'uss'`            |
+|Admin          |`'admin'`            |`'adm'`            |
+
+
+
+Remember set your variables creating your .env file The variables you should create are:
+
+-   PORT
+-   JWT_SECRET
+
+
+
+
+

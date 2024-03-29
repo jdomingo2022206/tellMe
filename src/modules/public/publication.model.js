@@ -5,6 +5,10 @@ const PublicationSchema = mongoose.Schema({
     type: String,
     required: [true, "El titulo es obligatorio"],
   },
+  date:{
+    type: Date,
+    default: Date.now
+  },
   userId: {
     type: Schema.Types.ObjectId,
     ref: 'User',
@@ -32,7 +36,7 @@ const PublicationSchema = mongoose.Schema({
     type: String,
   },
   comments: [{ 
-    type: Schema.Types.ObjectId, ref: 'Opinion' 
+    type: Schema.Types.ObjectId, ref: 'Comment' 
   }],
   estado: {
     type: Boolean,

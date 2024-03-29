@@ -1,61 +1,140 @@
-const User = require('../models/user');
-const Role = require('../models/role');
-const Course = require('../models/course');
+const User = require('../modules/user/user.model');
+const Role = require('../modules/role/role.model');
+const Publication = require('../modules/publication/publication.model');
+const Comment = require('../modules/comment/comment.model');
 
-const existentEmail = async (correo = '') => {
-    const existMail = await User.findOne({correo});
-    if(existMail){
-        throw new Error(`El email ${ correo } ya fue registrado`);
+export const existentEmail = async (correo = '') => {
+    console.log('');
+    console.log('--- [NOTES] existentEmail.db-validators');
+    try {
+        const existMail = await User.findOne({correo});
+        if(existMail){
+            throw new Error(`El email ${ correo } ya fue registrado`);
+        }
+    } catch (error) {
+        console.log('Error al buscar usuario por correo electrónico:', error);
+        //console.error('Error al buscar usuario por correo electrónico:', error);
+        //throw error; 
     }
 }
 
-const existentUserById = async ( id = '') => {
-    const existUser = await User.findOne({id});
-    if(existUser){
-        throw new Error(`El usuario con el ${ id } no existe`);
+export const existentUserById = async ( id = '') => {
+    console.log('');
+    console.log('--- [NOTES] existentUserById.db-validators');
+    try {
+        const existUser = await User.findOne({id});
+        if(existUser){
+            throw new Error(`El usuario con el ${ id } no existe`);
+        }
+    } catch (error) {
+        console.log('Error al buscar usuario por id:', error);
+        //console.error('Error al buscar usuario por id:', error);
+        //throw error;
     }
 }
 
-const roleValid = async (role='') => {
-    const existRole = await Role.findOne({role});
-
-    if(!existRole){
-        throw new Error(`El role ${ role } no existe en base de datos.` )
+export const roleValid = async (role='') => {
+    console.log('');
+    console.log('--- [NOTES] roleValid.db-validators');
+    try {
+        const existRole = await Role.findOne({role});
+        if(!existRole){
+            throw new Error(`El role ${ role } no existe en base de datos.` )
+        }
+    } catch (error) {
+        console.log('Error al buscar role:', error);
+        //console.error('Error al buscar role:', error);
+        //throw error;
     }
 }
 
-const existentCourseById = async ( id = '') => {
-    const existCourse = await Course.findOne({id});
+export const existentPublicationById = async ( id = '') => {
+    console.log('');
+    console.log('--- [NOTES] existentPublicationById.db-validators');
+    try {
+        const existPublication = await Publication.findOne({id});
     
-    if(existCourse){
-        throw new Error(`El curso con el ${ id } no existe`);
+        if(existPublication){
+            throw new Error(`La publicacion con el ${ id } no existe`);
+        }
+    } catch (error) {
+        console.log('Error al buscar publicacion por id:', error);
+        //console.error('Error al buscar publicacion por id:', error);
+        //throw error;
     }
 }
 
-const existentCourse = async (name = '') => {
-    const existCourse = await Course.findOne({name});
+export const copyExistentPublication = async (name = '', date ='') => {
+    console.log('');
+    console.log('--- [NOTES] copyExistentPublication.db-validators');
+    try {
+        const existPublication = await Publication.findOne({name, date});
 
-    if (existCourse) {
-        throw new Error(`El curso ${name} ya fue registrado`);
+        if (existPublication) {
+            throw new Error(`El curso ${name} ya fue registrado`);
+        }
+    } catch (error) {
+        console.log('Error al buscar publicacion por nombre y fecha:', error);
+        //console.error('Error al buscar publicacion por nombre y fecha:', error);
+        //throw error;
     }
 }
 
-const teacherValid = async (correo='') => {
-    const existTeacher = await User.findOne({correo});
-
-    if(!existTeacher){
-        throw new Error(`El profesor ${ correo } no existe en base de datos.` )
+export const existentPublication = async (name = '', date='') => {
+    console.log('');
+    console.log('--- [NOTES] existentPublication.db-validators');
+    try {
+        const existPublication = await Publication.findOne({name, date});
+        if(!existPublication){
+            throw new Error(`La publicacion con el ${ name } y la fecha ${date} no existe en base de datos.` )
+        }
+    } catch (error) {
+        console.log('Error al buscar publicacion por nombre y fecha:', error);
+        //console.error('Error al buscar publicacion por nombre y fecha:', error);
+        //throw error;
     }
 }
 
-const existUserByEmail  = async (correo='') => {
+export const copyExistentComment = async ( user = '', date='') => {
+    console.log('');
+    console.log('--- [NOTES] copyExistentCommentById.db-validators');
+    try {
+        const existComment = await Comment.findOne({user,date});
+        if(!existComment){
+            throw new Error(`El comentario con el ${ id } no existe`);
+        }
+    } catch (error) {
+        console.log('Error al buscar comentario por usuario y fecha:', error);
+        //console.error('Error al buscar comentario por usuario y fecha:', error);
+        //throw error;
+    }
+}
+
+export const existentCommentById = async ( id = '') => {
+    console.log('');
+    console.log('--- [NOTES] existentCommentById.db-validators');
+    try {
+        const existComment = await Comment.findOne({id});
+        if(!existComment){
+            throw new Error(`El comentario con el ${ id } no existe`);
+        }
+    } catch (error) {
+        console.log('Error al buscar comentario por id:', error);
+        //console.error('Error al buscar comentario por id:', error);
+        //throw error;
+    }
+}
+
+export const existUserByEmail  = async (correo='') => {
+    console.log('');
+    console.log('--- [NOTES] existUserByEmail.db-validators');
     try {
         const user = await User.findOne({correo});
         if (user) {
             return {
                 id: user._id,
-                name: user.nombre,
-                email: user.correo,
+                name: user.name,
+                email: user.mail,
                 status: user.estado
             };
         } else {
@@ -70,49 +149,4 @@ const existUserByEmail  = async (correo='') => {
     }
 }
 
-const existCourseByName  = async (name='') => {
-    try {
-        const course = await Course.findOne({name});
-        if (course) {
-            return course;
-        } else {
-            console.log(`El curso ${ name } no existe en base de datos.` )
-            //throw new Error(`El curso ${ name } no existe en base de datos.` )
-            return null; 
-        }
-    } catch (error) {
-        console.log('Error al buscar curso por nombre:', error);
-        //console.error('Error al buscar curso por nombre:', error);
-        //throw error; 
-    }
-}
 
-const existStudentByEmail  = async (correo='') => {
-    try {
-        const user = await User.findOne({correo});
-        if (user) {
-            return {
-                user
-            };
-        } else {
-            console.log(`El estudiante ${ correo } no existe en base de datos.` )
-            //throw new Error(`El estudiante ${ correo } no existe en base de datos.` )
-            return null; 
-        }
-    } catch (error) {
-        console.log('Error al buscar estudiante por correo electrónico:', error);
-        //console.error('Error al buscar estudiante por correo electrónico:', error);
-        //throw error; 
-    }
-}
-module.exports = {
-    existentEmail,
-    existentUserById,
-    roleValid,
-    existentCourseById,
-    existentCourse,
-    existUserByEmail,
-    teacherValid,
-    existCourseByName,
-    existStudentByEmail
-}
